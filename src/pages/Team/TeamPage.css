@@ -1,0 +1,20 @@
+.team-page {
+  width: 100%;
+}
+
+.team-page__hero {
+  padding: var(--spacing-xxxl) 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.team-page__hero h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: var(--spacing-md);
+}
+
+.team-page__hero p {
+  font-size: var(--font-size-body-large);
+  opacity: 0.95;
+}

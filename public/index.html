@@ -4,40 +4,93 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#1a365d" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Prodvestor connects elite software developers from emerging markets with global opportunities while building innovative technology solutions across healthcare, education, sustainability, and beyond."
     />
+    <meta name="keywords" content="software development, talent acquisition, Kenya developers, project development, IT consultation, tech training, AI development, blockchain solutions, Prodvestor" />
+    <meta name="author" content="Prodvestor Ltd" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prodvestor.com/" />
+    <meta property="og:title" content="Prodvestor | Bridging Talent with Innovation" />
+    <meta property="og:description" content="Prodvestor connects elite software developers from emerging markets with global opportunities while building innovative technology solutions." />
+    <meta property="og:image" content="%PUBLIC_URL%/assets/images/og-image.jpg" />
+    <meta property="og:site_name" content="Prodvestor" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://prodvestor.com/" />
+    <meta property="twitter:title" content="Prodvestor | Bridging Talent with Innovation" />
+    <meta property="twitter:description" content="Prodvestor connects elite software developers from emerging markets with global opportunities while building innovative technology solutions." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/assets/images/og-image.jpg" />
+    <meta name="twitter:site" content="@prodvestor" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://prodvestor.com/" />
+    
+    <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    
+    <!-- Manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    
+    <!-- Google Fonts - Optional: Add your preferred fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Prodvestor Ltd",
+      "url": "https://prodvestor.com",
+      "logo": "https://prodvestor.com/assets/images/logo/logo-primary.svg",
+      "description": "Bridging Talent with Innovation - Global software development talent acquisition and innovative technology solutions.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ndege Road, The Watermark Business Park, Nairobi Garage",
+        "addressLocality": "Karen",
+        "addressRegion": "Nairobi County",
+        "addressCountry": "Kenya"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+254-XXX-XXX-XXX",
+        "contactType": "Customer Service",
+        "email": "info@prodvestor.com"
+      },
+      "sameAs": [
+        "https://ke.linkedin.com/company/prodvestorinnovators",
+        "https://twitter.com/prodvestor",
+        "https://facebook.com/prodvestor",
+        "https://github.com/prodvestor"
+      ]
+    }
+    </script>
+    
+    <title>Prodvestor | Bridging Talent with Innovation</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="padding: 20px; text-align: center; font-family: Arial, sans-serif;">
+        <h1>JavaScript Required</h1>
+        <p>You need to enable JavaScript to run this application.</p>
+        <p>Please enable JavaScript in your browser settings and reload the page.</p>
+      </div>
+    </noscript>
+    
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
+    <!-- Root element where React app mounts -->
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

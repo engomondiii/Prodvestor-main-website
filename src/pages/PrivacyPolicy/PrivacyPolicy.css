@@ -1,0 +1,33 @@
+.privacy-policy-page {
+  padding: var(--spacing-xxxl) 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.privacy-policy-page h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: var(--spacing-md);
+}
+
+.last-updated {
+  color: var(--color-cloud-gray);
+  margin-bottom: var(--spacing-xl);
+}
+
+.privacy-policy-page section {
+  margin-bottom: var(--spacing-xxxl);
+}
+
+.privacy-policy-page h2 {
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--spacing-md);
+}
+
+.privacy-policy-page ul {
+  margin: var(--spacing-md) 0;
+  padding-left: var(--spacing-xl);
+}
+
+.privacy-policy-page li {
+  margin-bottom: var(--spacing-sm);
+}

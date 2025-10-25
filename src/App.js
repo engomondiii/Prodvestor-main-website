@@ -1,83 +1,93 @@
-/**
- * PRODVESTOR WEBSITE - MAIN APP COMPONENT
- * React Router setup with all routes
- * 
- * FILE LOCATION: src/App.js
- * 
- * This is the main application component that sets up routing
- * for the entire Prodvestor website.
- */
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import ScrollToTop from './components/common/ScrollToTop';
+import { trackPageView } from './utils/analytics';
 
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Import placeholder page components
+// Pages
 import Home from './pages/Home';
 import About from './pages/About';
-import Team from './pages/Team';
-import Services from './pages/Services';
-import ServiceDetail from './pages/ServiceDetail';
+import ServicesPage from './pages/Services';
+import TalentAcquisition from './pages/TalentAcquisition';
+import ProjectDevelopment from './pages/ProjectDevelopment';
+import ITConsultation from './pages/ITConsultation';
+import Training from './pages/Training';
 import Portfolio from './pages/Portfolio';
-import ProjectDetail from './pages/ProjectDetail';
-import Contact from './pages/Contact';
+import ProjectDetails from './pages/ProjectDetails';
+import TeamPage from './pages/Team';
 import Careers from './pages/Careers';
-import CareerDetail from './pages/CareerDetail';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import FAQ from './pages/FAQ';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
+import BlogPage from './pages/Blog';
+import BlogPostPage from './pages/BlogPost';
+import ContactPage from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import NotFound from './pages/NotFound';
 
+import './App.css';
+
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    trackPageView(location.pathname, document.title);
+  }, [location]);
+
+  useEffect(() => {
+    const routeTitles = {
+      '/': 'Prodvestor | Bridging Talent with Innovation',
+      '/about': 'About Us | Prodvestor',
+      '/services': 'Our Services | Prodvestor',
+      '/services/talent-acquisition': 'Talent Acquisition Services | Prodvestor',
+      '/services/project-development': 'Project Development Services | Prodvestor',
+      '/services/it-consultation': 'IT Consultation Services | Prodvestor',
+      '/services/training': 'Training & Mentorship | Prodvestor',
+      '/portfolio': 'Portfolio | Prodvestor',
+      '/team': 'Our Team | Prodvestor',
+      '/careers': 'Careers | Prodvestor',
+      '/blog': 'Blog | Prodvestor',
+      '/contact': 'Contact Us | Prodvestor',
+      '/privacy-policy': 'Privacy Policy | Prodvestor'
+    };
+
+    document.title = routeTitles[location.pathname] || 'Prodvestor | Bridging Talent with Innovation';
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      const descriptions = {
+        '/': 'Prodvestor connects elite software developers from emerging markets with global opportunities while building innovative technology solutions.',
+        '/about': 'Learn about Prodvestor\'s mission to bridge global talent with innovation.',
+        '/services': 'Comprehensive technology services including talent acquisition, project development, IT consultation, and training.',
+        '/portfolio': 'Explore our portfolio of innovative technology solutions.'
+      };
+      metaDescription.setAttribute('content', descriptions[location.pathname] || descriptions['/']);
+    }
+  }, [location]);
+
   return (
-    <Router>
-      <div className="app">
-        {/* Skip to main content link for accessibility */}
-        <a href="#main-content" className="skip-to-main">
-          Skip to main content
-        </a>
-
-        {/* Main Routes */}
+    <div className="app">
+      <ScrollToTop />
+      <Layout>
         <Routes>
-          {/* Home Page */}
           <Route path="/" element={<Home />} />
-
-          {/* About Pages */}
           <Route path="/about" element={<About />} />
-          <Route path="/about/team" element={<Team />} />
-
-          {/* Services Pages */}
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:slug" element={<ServiceDetail />} />
-
-          {/* Portfolio Pages */}
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/talent-acquisition" element={<TalentAcquisition />} />
+          <Route path="/services/project-development" element={<ProjectDevelopment />} />
+          <Route path="/services/it-consultation" element={<ITConsultation />} />
+          <Route path="/services/training" element={<Training />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio/:slug" element={<ProjectDetail />} />
-
-          {/* Contact Page */}
-          <Route path="/contact" element={<Contact />} />
-
-          {/* Careers Pages */}
+          <Route path="/portfolio/:slug" element={<ProjectDetails />} />
+          <Route path="/projects/:slug" element={<ProjectDetails />} />
+          <Route path="/team" element={<TeamPage />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/careers/:id" element={<CareerDetail />} />
-
-          {/* Blog Pages */}
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-
-          {/* FAQ Page */}
-          <Route path="/faq" element={<FAQ />} />
-
-          {/* Legal Pages */}
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
-
-          {/* 404 Not Found - Must be last */}
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </div>
-    </Router>
+      </Layout>
+    </div>
   );
 }
 

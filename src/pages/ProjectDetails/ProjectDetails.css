@@ -1,0 +1,34 @@
+.project-details-page {
+  width: 100%;
+}
+
+.project-details__hero {
+  padding: var(--spacing-xxxl) 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.project-details__content {
+  padding: var(--spacing-xxxl) 0;
+}
+
+.project-details__content img {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.project-details__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-lg) 0;
+}
+
+.tech-badge {
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--color-gray-light);
+  border-radius: var(--radius-sm);
+}
