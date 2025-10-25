@@ -1,0 +1,240 @@
+/**
+ * PRODVESTOR WEBSITE - CSS VARIABLES
+ * All CSS custom properties for consistent theming
+ * Based on Prodvestor Theme Document
+ */
+
+:root {
+  /* ============================================
+     PRIMARY COLOR PALETTE
+     ============================================ */
+  
+  /* Brand Core Colors */
+  --color-primary: #001F3F;           /* Deep, authoritative navy - Logo color */
+  --color-white: #FFFFFF;             /* Clean, professional - Logo color */
+  --color-black: #000000;             /* Strong contrast - Logo color */
+  
+  /* Primary Accent Colors */
+  --color-accent: #0074D9;            /* Electric Blue - Call-to-action buttons */
+  --color-accent-hover: #0063B8;      /* Electric Blue Hover */
+  --color-accent-active: #005299;     /* Electric Blue Active */
+  --color-sky-blue: #4A90E2;          /* Secondary actions, hover states */
+  --color-cyan: #00B4D8;              /* Interactive elements, progress indicators */
+  
+  /* Supporting Colors */
+  --color-slate-gray: #2C3E50;        /* Navigation backgrounds, cards */
+  --color-charcoal: #1A1A1A;          /* Text, secondary headers */
+  --color-steel-blue: #34495E;        /* Borders, dividers, subtle backgrounds */
+  
+  /* Neutral Tones */
+  --color-gray-light: #F8F9FA;        /* Page backgrounds, alternating sections */
+  --color-silver: #E8E8E8;            /* Input fields, borders */
+  --color-cloud-gray: #BFBFBF;        /* Disabled states, subtle text */
+  --color-off-white: #FAFAFA;         /* Card backgrounds, hover effects */
+  
+  /* Success & Status Colors */
+  --color-success: #28A745;           /* Success messages, completed states */
+  --color-emerald: #10B981;           /* Positive metrics, growth indicators */
+  --color-warning: #FF8C00;           /* Warnings, important notices */
+  --color-gold: #FFB800;              /* Premium features, highlights */
+  --color-error: #DC3545;             /* Errors, critical alerts */
+  --color-info: #17A2B8;              /* Information, tips */
+  
+  /* Gradient Combinations */
+  --gradient-primary: linear-gradient(135deg, #001F3F 0%, #0074D9 100%);
+  --gradient-hero: linear-gradient(135deg, #001F3F 0%, #00B4D8 50%, #0074D9 100%);
+  --gradient-card: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+  --gradient-overlay-dark: linear-gradient(180deg, rgba(0,31,63,0.9) 0%, rgba(0,31,63,0.7) 100%);
+  --gradient-overlay-light: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.9) 100%);
+  
+  /* ============================================
+     TYPOGRAPHY SYSTEM
+     ============================================ */
+  
+  /* Font Families */
+  --font-heading: 'Bebas Neue', 'Roboto', sans-serif;
+  --font-body: 'Arial', 'Helvetica Neue', sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', monospace;
+  
+  /* Font Sizes - Desktop */
+  --font-size-h1: 4.5rem;             /* 72px - Hero Heading */
+  --font-size-h2: 3.5rem;             /* 56px - Section Heading */
+  --font-size-h3: 2.5rem;             /* 40px - Subsection */
+  --font-size-h4: 2rem;               /* 32px - Card Heading */
+  --font-size-h5: 1.5rem;             /* 24px - Component Title */
+  --font-size-h6: 1.25rem;            /* 20px - Small Heading */
+  --font-size-body-large: 1.25rem;    /* 20px */
+  --font-size-body: 1rem;             /* 16px */
+  --font-size-body-small: 0.875rem;   /* 14px */
+  --font-size-caption: 0.75rem;       /* 12px */
+  
+  /* Font Sizes - Mobile */
+  --font-size-h1-mobile: 3rem;        /* 48px */
+  --font-size-h2-mobile: 2.25rem;     /* 36px */
+  --font-size-h3-mobile: 1.75rem;     /* 28px */
+  --font-size-h4-mobile: 1.5rem;      /* 24px */
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Line Heights */
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.2;
+  --line-height-normal: 1.3;
+  --line-height-relaxed: 1.4;
+  --line-height-loose: 1.5;
+  --line-height-body: 1.6;
+  --line-height-body-large: 1.7;
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -1px;
+  --letter-spacing-snug: -0.5px;
+  --letter-spacing-normal: 0px;
+  
+  /* ============================================
+     SPACING & LAYOUT
+     ============================================ */
+  
+  /* Spacing Scale (8px base unit) */
+  --spacing-xxs: 0.25rem;             /* 4px */
+  --spacing-xs: 0.5rem;               /* 8px */
+  --spacing-sm: 1rem;                 /* 16px */
+  --spacing-md: 1.5rem;               /* 24px */
+  --spacing-lg: 2rem;                 /* 32px */
+  --spacing-xl: 3rem;                 /* 48px */
+  --spacing-xxl: 4rem;                /* 64px */
+  --spacing-xxxl: 6rem;               /* 96px */
+  --spacing-huge: 8rem;               /* 128px */
+  
+  /* Container Widths */
+  --container-full: 100%;
+  --container-wide: 1400px;
+  --container-standard: 1200px;
+  --container-narrow: 960px;
+  --container-content: 720px;
+  
+  /* Grid System */
+  --grid-columns: 12;
+  --grid-gutter: 24px;
+  --grid-gutter-mobile: 16px;
+  
+  /* ============================================
+     VISUAL EFFECTS
+     ============================================ */
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.15);
+  --shadow-colored: 0 8px 24px rgba(0, 116, 217, 0.25);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-round: 24px;
+  --radius-circle: 50%;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-standard: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+  
+  /* ============================================
+     COMPONENT-SPECIFIC VARIABLES
+     ============================================ */
+  
+  /* Buttons */
+  --button-padding: 14px 32px;
+  --button-font-size: 16px;
+  --button-font-weight: var(--font-weight-semibold);
+  --button-border-radius: var(--radius-md);
+  
+  /* Cards */
+  --card-padding: 32px;
+  --card-border-radius: var(--radius-lg);
+  --card-border: 1px solid var(--color-silver);
+  
+  /* Input Fields */
+  --input-padding: 12px 16px;
+  --input-font-size: 16px;
+  --input-border-radius: var(--radius-md);
+  --input-border: 2px solid var(--color-silver);
+  
+  /* Navigation */
+  --nav-height: 80px;
+  --nav-background: var(--color-white);
+  
+  /* Hero Section */
+  --hero-min-height: 90vh;
+  --hero-padding: 120px 0;
+  
+  /* Section Padding */
+  --section-padding: 80px 0;
+  --section-padding-large: 100px 0;
+  
+  /* ============================================
+     BREAKPOINTS
+     ============================================ */
+  
+  --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1440px;
+  
+  /* ============================================
+     Z-INDEX SCALE
+     ============================================ */
+  
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+  
+  /* ============================================
+     ACCESSIBILITY
+     ============================================ */
+  
+  /* Focus States */
+  --focus-outline: 2px solid var(--color-accent);
+  --focus-outline-offset: 2px;
+  --focus-shadow: 0 0 0 3px rgba(0, 116, 217, 0.2);
+  
+  /* Touch Targets */
+  --touch-target-min: 44px;
+}
+
+/**
+ * Dark Mode Variables (Optional - for future implementation)
+ */
+[data-theme="dark"] {
+  --color-primary: #003366;
+  --color-white: #1A1A1A;
+  --color-black: #FFFFFF;
+  --color-gray-light: #2C2C2C;
+  --color-charcoal: #E8E8E8;
+  /* Add more dark mode overrides as needed */
+}
+
+/**
+ * Print Styles Variables
+ */
+@media print {
+  :root {
+    --color-primary: #000000;
+    --color-accent: #000000;
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+  }
+}

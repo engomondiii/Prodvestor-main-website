@@ -1,0 +1,544 @@
+/**
+ * PRODVESTOR WEBSITE - THEMES
+ * Theme variations including dark mode
+ * Based on Prodvestor Theme Document
+ * 
+ * FILE LOCATION: src/styles/themes.css
+ * 
+ * USAGE:
+ * - Light mode: default (no attribute needed)
+ * - Dark mode: add data-theme="dark" to <html> or <body>
+ * - High contrast: add data-theme="high-contrast" to <html> or <body>
+ * 
+ * IMPLEMENTATION:
+ * Toggle theme with JavaScript:
+ * document.documentElement.setAttribute('data-theme', 'dark');
+ * document.documentElement.removeAttribute('data-theme');
+ */
+
+/* ============================================
+   LIGHT THEME (DEFAULT)
+   No selector needed - this is the default theme
+   All variables are defined in variables.css
+   ============================================ */
+
+/* Light theme is the default - uses variables from variables.css */
+
+/* ============================================
+   DARK MODE THEME
+   ============================================ */
+
+[data-theme="dark"] {
+  /* ============================================
+     PRIMARY COLORS - DARK MODE
+     ============================================ */
+  
+  /* Brand Core Colors - Adjusted for dark mode */
+  --color-primary: #003d7a;              /* Lighter navy for dark backgrounds */
+  --color-white: #1a1a1a;                /* Dark background */
+  --color-black: #f5f5f5;                /* Light text */
+  
+  /* Primary Accent Colors - More vibrant for dark mode */
+  --color-accent: #2196f3;               /* Brighter electric blue */
+  --color-accent-hover: #42a5f5;         /* Lighter hover state */
+  --color-accent-active: #1976d2;        /* Darker active state */
+  --color-sky-blue: #64b5f6;             /* Lighter sky blue */
+  --color-cyan: #26c6da;                 /* Brighter cyan */
+  
+  /* Supporting Colors - Adjusted for dark backgrounds */
+  --color-slate-gray: #37474f;           /* Lighter slate for contrast */
+  --color-charcoal: #e0e0e0;             /* Light gray for text */
+  --color-steel-blue: #455a64;           /* Lighter steel blue */
+  
+  /* Neutral Tones - Inverted for dark mode */
+  --color-gray-light: #2c2c2c;           /* Dark gray for backgrounds */
+  --color-silver: #424242;               /* Darker silver for borders */
+  --color-cloud-gray: #757575;           /* Medium gray for disabled */
+  --color-off-white: #1f1f1f;            /* Very dark for card backgrounds */
+  
+  /* Success & Status Colors - Adjusted for visibility */
+  --color-success: #4caf50;              /* Brighter green */
+  --color-emerald: #26a69a;              /* Brighter emerald */
+  --color-warning: #ffa726;              /* Brighter orange */
+  --color-gold: #ffc107;                 /* Brighter gold */
+  --color-error: #ef5350;                /* Brighter red */
+  --color-info: #29b6f6;                 /* Brighter info blue */
+  
+  /* Gradient Combinations - Adjusted for dark mode */
+  --gradient-primary: linear-gradient(135deg, #003d7a 0%, #2196f3 100%);
+  --gradient-hero: linear-gradient(135deg, #003d7a 0%, #26c6da 50%, #2196f3 100%);
+  --gradient-card: linear-gradient(180deg, #2c2c2c 0%, #1f1f1f 100%);
+  --gradient-overlay-dark: linear-gradient(180deg, rgba(0,61,122,0.95) 0%, rgba(0,61,122,0.8) 100%);
+  --gradient-overlay-light: linear-gradient(180deg, rgba(44,44,44,0.95) 0%, rgba(31,31,31,0.9) 100%);
+  
+  /* ============================================
+     SHADOWS - DARK MODE (lighter, more subtle)
+     ============================================ */
+  
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+  --shadow-colored: 0 8px 24px rgba(33, 150, 243, 0.3);
+  
+  /* ============================================
+     COMPONENT-SPECIFIC - DARK MODE
+     ============================================ */
+  
+  /* Navigation */
+  --nav-background: #1f1f1f;
+  
+  /* Cards */
+  --card-border: 1px solid #424242;
+  
+  /* Input Fields */
+  --input-border: 2px solid #424242;
+}
+
+/* ============================================
+   DARK MODE - ADDITIONAL STYLES
+   ============================================ */
+
+[data-theme="dark"] body {
+  background-color: var(--color-gray-light);
+  color: var(--color-charcoal);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: var(--color-black);
+}
+
+[data-theme="dark"] a {
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Card styles in dark mode */
+[data-theme="dark"] .card {
+  background-color: var(--color-off-white);
+  border-color: var(--color-silver);
+}
+
+/* Button styles in dark mode */
+[data-theme="dark"] button:not(.btn-primary) {
+  background-color: var(--color-silver);
+  color: var(--color-black);
+}
+
+[data-theme="dark"] button:not(.btn-primary):hover {
+  background-color: var(--color-steel-blue);
+}
+
+/* Input styles in dark mode */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: var(--color-silver);
+  border-color: var(--color-steel-blue);
+  color: var(--color-black);
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: var(--color-cloud-gray);
+}
+
+/* Navigation in dark mode */
+[data-theme="dark"] nav {
+  background-color: var(--nav-background);
+  border-bottom-color: var(--color-silver);
+}
+
+/* Code blocks in dark mode */
+[data-theme="dark"] code {
+  background-color: var(--color-silver);
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] pre {
+  background-color: #0d0d0d;
+  color: var(--color-black);
+}
+
+/* Scrollbar in dark mode */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--color-silver);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--color-steel-blue);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Selection in dark mode */
+[data-theme="dark"] ::selection {
+  background-color: rgba(33, 150, 243, 0.3);
+  color: var(--color-black);
+}
+
+/* ============================================
+   HIGH CONTRAST THEME
+   For accessibility - WCAG AAA compliance
+   ============================================ */
+
+[data-theme="high-contrast"] {
+  /* Maximum contrast colors */
+  --color-primary: #000000;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-accent: #0000ff;              /* Pure blue for links */
+  --color-accent-hover: #0000cc;
+  --color-charcoal: #000000;
+  --color-gray-light: #ffffff;
+  --color-silver: #000000;
+  
+  /* Remove gradients for high contrast */
+  --gradient-primary: #000000;
+  --gradient-hero: #000000;
+  --gradient-card: #ffffff;
+  
+  /* Strong borders */
+  --card-border: 2px solid #000000;
+  --input-border: 3px solid #000000;
+  
+  /* No shadows in high contrast */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  --shadow-colored: none;
+}
+
+[data-theme="high-contrast"] body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+[data-theme="high-contrast"] a {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+[data-theme="high-contrast"] button {
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+[data-theme="high-contrast"] .card {
+  border: 3px solid #000000;
+  background-color: #ffffff;
+}
+
+[data-theme="high-contrast"] input,
+[data-theme="high-contrast"] textarea,
+[data-theme="high-contrast"] select {
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* ============================================
+   PRINT THEME
+   Automatically applied when printing
+   ============================================ */
+
+@media print {
+  /* Force light theme for printing */
+  [data-theme="dark"],
+  [data-theme="high-contrast"] {
+    --color-primary: #000000;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-charcoal: #000000;
+    --color-gray-light: #ffffff;
+  }
+  
+  /* Remove all shadows */
+  * {
+    box-shadow: none !important;
+  }
+  
+  /* Remove backgrounds except white */
+  * {
+    background-image: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* ============================================
+   THEME TRANSITION
+   Smooth transition when switching themes
+   ============================================ */
+
+body,
+.card,
+button,
+input,
+textarea,
+select,
+nav {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease;
+}
+
+/* Disable transitions if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .card,
+  button,
+  input,
+  textarea,
+  select,
+  nav {
+    transition: none !important;
+  }
+}
+
+/* ============================================
+   AUTOMATIC DARK MODE
+   Based on system preference
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  /* This applies dark mode automatically if user's system is set to dark mode */
+  /* AND if no data-theme attribute is set (user hasn't manually chosen) */
+  
+  :root:not([data-theme]) {
+    /* Copy all dark mode variables here */
+    /* Uncomment to enable automatic dark mode: */
+    
+    /*
+    --color-primary: #003d7a;
+    --color-white: #1a1a1a;
+    --color-black: #f5f5f5;
+    --color-accent: #2196f3;
+    --color-gray-light: #2c2c2c;
+    ... (add all dark mode variables)
+    */
+  }
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON STYLES
+   For the theme switcher component
+   ============================================ */
+
+.theme-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: var(--color-silver);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color var(--transition-standard);
+  border: 2px solid var(--color-accent);
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-cloud-gray);
+}
+
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  transition: transform var(--transition-standard);
+}
+
+[data-theme="dark"] .theme-toggle::before {
+  transform: translateX(30px);
+  background-color: var(--color-accent);
+}
+
+/* Theme toggle icons */
+.theme-toggle-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.theme-toggle-icon-sun {
+  left: 6px;
+  color: var(--color-gold);
+}
+
+.theme-toggle-icon-moon {
+  right: 6px;
+  color: var(--color-white);
+}
+
+[data-theme="dark"] .theme-toggle-icon-sun {
+  color: var(--color-cloud-gray);
+}
+
+[data-theme="dark"] .theme-toggle-icon-moon {
+  color: var(--color-accent);
+}
+
+/* ============================================
+   THEME SELECTOR DROPDOWN
+   For choosing between multiple themes
+   ============================================ */
+
+.theme-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.theme-selector select {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-silver);
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.theme-selector select:hover {
+  border-color: var(--color-accent);
+}
+
+.theme-selector select:focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* ============================================
+   THEME PERSISTENCE
+   Store user's theme choice in localStorage
+   ============================================ */
+
+/*
+  JAVASCRIPT IMPLEMENTATION:
+
+  // Save theme
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('prodvestor-theme', theme);
+  }
+
+  // Load theme on page load
+  function loadTheme() {
+    const savedTheme = localStorage.getItem('prodvestor-theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  }
+
+  // Toggle between light and dark
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', loadTheme);
+*/
+
+/* ============================================
+   USAGE EXAMPLES
+   ============================================ */
+
+/*
+  HTML EXAMPLES:
+
+  1. Toggle between light and dark:
+  <button onclick="toggleTheme()">Toggle Theme</button>
+
+  2. Theme toggle switch:
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span class="theme-toggle-icon theme-toggle-icon-sun">☀️</span>
+    <span class="theme-toggle-icon theme-toggle-icon-moon">🌙</span>
+  </div>
+
+  3. Theme selector dropdown:
+  <div class="theme-selector">
+    <select onchange="setTheme(this.value)">
+      <option value="light">Light Theme</option>
+      <option value="dark">Dark Theme</option>
+      <option value="high-contrast">High Contrast</option>
+    </select>
+  </div>
+
+  4. Manual theme setting:
+  <button onclick="setTheme('dark')">Dark Mode</button>
+  <button onclick="setTheme('light')">Light Mode</button>
+  <button onclick="setTheme('high-contrast')">High Contrast</button>
+*/
+
+/* ============================================
+   ACCESSIBILITY NOTES
+   ============================================ */
+
+/*
+  IMPORTANT:
+  - Test all themes for WCAG AA contrast (minimum 4.5:1 for normal text)
+  - High contrast theme provides WCAG AAA compliance (7:1)
+  - Ensure theme toggle is keyboard accessible
+  - Announce theme changes to screen readers
+  - Respect user's prefers-color-scheme preference
+  - Provide manual override for system preference
+  - Store user's manual choice in localStorage
+  - Test all interactive elements in all themes
+*/
+
+/* ============================================
+   FUTURE THEME OPTIONS (COMMENTED OUT)
+   ============================================ */
+
+/* Blue Theme - Uncomment to enable */
+/*
+[data-theme="blue"] {
+  --color-primary: #1565c0;
+  --color-accent: #42a5f5;
+  --color-gray-light: #e3f2fd;
+}
+*/
+
+/* Sepia Theme - For reduced eye strain */
+/*
+[data-theme="sepia"] {
+  --color-white: #f4ecd8;
+  --color-black: #5c4a3a;
+  --color-gray-light: #f9f5e8;
+  --color-charcoal: #5c4a3a;
+}
+*/
+
+/* Solarized Theme - Popular developer theme */
+/*
+[data-theme="solarized"] {
+  --color-primary: #268bd2;
+  --color-white: #fdf6e3;
+  --color-black: #073642;
+  --color-accent: #b58900;
+  --color-gray-light: #eee8d5;
+}
+*/
