@@ -1,0 +1,52 @@
+/**
+ * PRODVESTOR WEBSITE - LAYOUT STYLES
+ * FILE LOCATION: src/components/layout/Layout/Layout.css
+ */
+
+/* Layout Container */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Content Area */
+.layout__main {
+  flex: 1;
+  width: 100%;
+  margin-top: var(--nav-height);
+}
+
+/* Skip to Main Content Link (Accessibility) */
+.layout__skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: var(--z-index-tooltip);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  transition: left var(--transition-fast);
+}
+
+.layout__skip-link:focus {
+  left: 50%;
+  top: var(--spacing-sm);
+  transform: translateX(-50%);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .layout__main {
+    margin-top: 64px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .layout__main {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,43 @@
+/**
+ * PRODVESTOR WEBSITE - STAT CARD STYLES
+ * FILE LOCATION: src/components/sections/Stats/StatCard.css
+ */
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+}
+
+.stat-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-card__number {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.stat-card__label {
+  font-size: var(--font-size-body);
+  color: var(--color-cloud-gray);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .stat-card__number {
+    font-size: var(--font-size-h3);
+  }
+  
+  .stat-card__icon {
+    font-size: 2rem;
+  }
+}

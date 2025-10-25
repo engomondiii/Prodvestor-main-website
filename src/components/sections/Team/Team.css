@@ -1,0 +1,84 @@
+/**
+ * PRODVESTOR WEBSITE - TEAM SECTION STYLES
+ * FILE LOCATION: src/components/sections/Team/Team.css
+ */
+
+.team-section {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-white);
+}
+
+.team-section__container {
+  max-width: var(--container-wide);
+}
+
+/* Header */
+.team-section__header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xxxl);
+}
+
+.team-section__subtitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.team-section__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-md);
+}
+
+.team-section__description {
+  font-size: var(--font-size-body-large);
+  color: var(--color-cloud-gray);
+  line-height: var(--line-height-body-large);
+}
+
+/* Grid */
+.team-section__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxxl);
+}
+
+/* Footer */
+.team-section__footer {
+  text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .team-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .team-section {
+    padding: var(--spacing-xxl) 0;
+  }
+
+  .team-section__header {
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  .team-section__title {
+    font-size: var(--font-size-h3);
+  }
+
+  .team-section__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xxl);
+  }
+}

@@ -1,0 +1,110 @@
+/**
+ * PRODVESTOR WEBSITE - STATS SECTION STYLES
+ * FILE LOCATION: src/components/sections/Stats/Stats.css
+ */
+
+.stats-section {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-gray-light);
+}
+
+.stats-section__container {
+  max-width: var(--container-wide);
+}
+
+/* Header */
+.stats-section__header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xxxl);
+}
+
+.stats-section__subtitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.stats-section__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+/* Grid */
+.stats-section__grid {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
+.stats-section__grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.stats-section__grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stats-section__grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stats-section__grid--5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* Variants */
+.stats-section--primary {
+  background: linear-gradient(135deg, 
+    var(--color-primary) 0%, 
+    var(--color-accent) 100%);
+}
+
+.stats-section--primary .stats-section__title,
+.stats-section--primary .stats-section__subtitle {
+  color: var(--color-white);
+}
+
+.stats-section--primary .stat-card__number {
+  color: var(--color-white);
+}
+
+.stats-section--primary .stat-card__label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .stats-section__grid--4,
+  .stats-section__grid--5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .stats-section {
+    padding: var(--spacing-xxl) 0;
+  }
+
+  .stats-section__header {
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  .stats-section__title {
+    font-size: var(--font-size-h3);
+  }
+
+  .stats-section__grid--2,
+  .stats-section__grid--3,
+  .stats-section__grid--4,
+  .stats-section__grid--5 {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}

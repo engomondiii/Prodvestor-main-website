@@ -1,0 +1,230 @@
+/**
+ * PRODVESTOR WEBSITE - SERVICES PAGE STYLES
+ * FILE LOCATION: src/pages/Services/ServicesPage.css
+ */
+
+.services-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.services-page__hero {
+  padding: calc(var(--spacing-xxxl) * 2) 0 var(--spacing-xxxl);
+  background: linear-gradient(135deg, 
+    var(--color-primary) 0%, 
+    var(--color-accent) 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.services-page__hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.services-page__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
+}
+
+.services-page__subtitle {
+  font-size: var(--font-size-body-large);
+  line-height: var(--line-height-body-large);
+  opacity: 0.95;
+}
+
+/* Common Section Styles */
+.services-page__section-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-charcoal);
+}
+
+.services-page__section-description {
+  font-size: var(--font-size-body-large);
+  text-align: center;
+  color: var(--color-cloud-gray);
+  max-width: 700px;
+  margin: 0 auto var(--spacing-xxxl);
+}
+
+/* Categories Section */
+.services-page__categories {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-white);
+}
+
+.services-page__categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.services-page__category {
+  padding: var(--spacing-xl);
+  background-color: var(--color-gray-light);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-standard);
+}
+
+.services-page__category:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.services-page__category-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.services-page__category h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h4);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-charcoal);
+}
+
+.services-page__category > p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body-large);
+  color: var(--color-cloud-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+.services-page__category-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-page__category-features li {
+  font-size: var(--font-size-body-small);
+  color: var(--color-charcoal);
+  padding: var(--spacing-xs) 0;
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.services-page__category-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Technology Stack */
+.services-page__tech-stack {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-gray-light);
+}
+
+.services-page__tech-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.services-page__tech-category {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+}
+
+.services-page__tech-category h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-charcoal);
+}
+
+.services-page__tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.services-page__tech-tags span {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-gray-light);
+  color: var(--color-charcoal);
+  font-size: var(--font-size-body-small);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Industries Section */
+.services-page__industries {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-white);
+}
+
+.services-page__industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.services-page__industry {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.services-page__industry-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.services-page__industry h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-charcoal);
+}
+
+.services-page__industry p {
+  font-size: var(--font-size-body-small);
+  color: var(--color-cloud-gray);
+  margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .services-page__categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-page__tech-categories,
+  .services-page__industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .services-page__hero {
+    padding: var(--spacing-xxxl) 0 var(--spacing-xxl);
+  }
+
+  .services-page__title {
+    font-size: var(--font-size-h2);
+  }
+
+  .services-page__subtitle {
+    font-size: var(--font-size-body);
+  }
+
+  .services-page__tech-categories,
+  .services-page__industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-page__section-title {
+    font-size: var(--font-size-h3);
+  }
+}

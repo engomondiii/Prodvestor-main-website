@@ -1,0 +1,232 @@
+/**
+ * PRODVESTOR WEBSITE - HERO STYLES
+ * FILE LOCATION: src/components/sections/Hero/Hero.css
+ */
+
+.hero {
+  position: relative;
+  padding: calc(var(--spacing-xxxl) * 2) 0 var(--spacing-xxxl);
+  overflow: hidden;
+}
+
+/* Background */
+.hero--with-bg {
+  color: var(--color-white);
+}
+
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero__background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(26, 35, 126, 0.95) 0%, 
+    rgba(0, 116, 217, 0.85) 100%);
+}
+
+/* Container */
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xxxl);
+  align-items: center;
+}
+
+/* Content */
+.hero__content {
+  max-width: 600px;
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero--with-bg .hero__subtitle {
+  color: var(--color-white);
+  opacity: 0.9;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-charcoal);
+  line-height: var(--line-height-heading-tight);
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero--with-bg .hero__title {
+  color: var(--color-white);
+}
+
+.hero__description {
+  font-size: var(--font-size-body-large);
+  color: var(--color-cloud-gray);
+  line-height: var(--line-height-body-large);
+  margin-bottom: var(--spacing-xl);
+}
+
+.hero--with-bg .hero__description {
+  color: var(--color-white);
+  opacity: 0.95;
+}
+
+/* Actions */
+.hero__actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xxxl);
+}
+
+/* Stats */
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  border-top: 2px solid var(--color-gray-light);
+}
+
+.hero--with-bg .hero__stats {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.hero__stat-number {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+}
+
+.hero--with-bg .hero__stat-number {
+  color: var(--color-white);
+}
+
+.hero__stat-label {
+  font-size: var(--font-size-body-small);
+  color: var(--color-cloud-gray);
+}
+
+.hero--with-bg .hero__stat-label {
+  color: var(--color-white);
+  opacity: 0.9;
+}
+
+/* Image */
+.hero__image {
+  position: relative;
+  animation: fadeInRight 1s ease-out;
+}
+
+.hero__image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Variants */
+.hero--centered .hero__container {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.hero--centered .hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero--centered .hero__actions {
+  justify-content: center;
+}
+
+.hero--centered .hero__stats {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xxl);
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero {
+    padding: var(--spacing-xxxl) 0 var(--spacing-xxl);
+  }
+
+  .hero__title {
+    font-size: var(--font-size-h2);
+  }
+
+  .hero__description {
+    font-size: var(--font-size-body);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero__image {
+    animation: none;
+  }
+}

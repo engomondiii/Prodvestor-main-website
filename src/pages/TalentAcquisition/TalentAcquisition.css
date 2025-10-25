@@ -1,0 +1,353 @@
+/**
+ * PRODVESTOR WEBSITE - TALENT ACQUISITION PAGE STYLES
+ * FILE LOCATION: src/pages/TalentAcquisition/TalentAcquisition.css
+ */
+
+.talent-acquisition-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.talent-acquisition__hero {
+  padding: calc(var(--spacing-xxxl) * 2) 0 var(--spacing-xxxl);
+  background: linear-gradient(135deg, 
+    var(--color-primary) 0%, 
+    var(--color-accent) 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.talent-acquisition__hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.talent-acquisition__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
+}
+
+.talent-acquisition__subtitle {
+  font-size: var(--font-size-body-large);
+  line-height: var(--line-height-body-large);
+  opacity: 0.95;
+  margin-bottom: var(--spacing-xl);
+}
+
+.talent-acquisition__hero-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Common Section Styles */
+.talent-acquisition__section-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-charcoal);
+}
+
+.talent-acquisition__section-description {
+  font-size: var(--font-size-body-large);
+  text-align: center;
+  color: var(--color-cloud-gray);
+  max-width: 700px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+/* Value Proposition */
+.talent-acquisition__value {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-white);
+}
+
+.talent-acquisition__value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.talent-acquisition__value-item {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.talent-acquisition__value-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.talent-acquisition__value-item h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-charcoal);
+}
+
+.talent-acquisition__value-item p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body-large);
+  color: var(--color-cloud-gray);
+  margin: 0;
+}
+
+/* Expertise Section */
+.talent-acquisition__expertise {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-gray-light);
+}
+
+.talent-acquisition__expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.talent-acquisition__expertise-category {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+}
+
+.talent-acquisition__expertise-category h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-charcoal);
+}
+
+.talent-acquisition__expertise-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.talent-acquisition__expertise-category li {
+  font-size: var(--font-size-body-small);
+  color: var(--color-cloud-gray);
+  padding: var(--spacing-xs) 0;
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.talent-acquisition__expertise-category li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Experience Levels */
+.talent-acquisition__levels {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-white);
+}
+
+.talent-acquisition__levels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.talent-acquisition__level-card {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-gray-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  transition: all var(--transition-standard);
+}
+
+.talent-acquisition__level-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
+}
+
+.talent-acquisition__level-card--featured {
+  border-color: var(--color-accent);
+  background-color: var(--color-gray-light);
+}
+
+.talent-acquisition__level-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-md);
+}
+
+.talent-acquisition__level-card h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h4);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-charcoal);
+}
+
+.talent-acquisition__level-experience {
+  color: var(--color-cloud-gray);
+  font-size: var(--font-size-body-small);
+  margin-bottom: var(--spacing-md);
+}
+
+.talent-acquisition__level-features {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-lg) 0;
+  text-align: left;
+}
+
+.talent-acquisition__level-features li {
+  font-size: var(--font-size-body-small);
+  color: var(--color-cloud-gray);
+  padding: var(--spacing-xs) 0;
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.talent-acquisition__level-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}
+
+.talent-acquisition__level-price {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  margin: var(--spacing-lg) 0 0;
+}
+
+/* Pricing Section */
+.talent-acquisition__pricing {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-gray-light);
+}
+
+.talent-acquisition__pricing-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.talent-acquisition__pricing-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+}
+
+.talent-acquisition__pricing-card h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-charcoal);
+}
+
+.talent-acquisition__pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.talent-acquisition__pricing-card li {
+  font-size: var(--font-size-body);
+  color: var(--color-cloud-gray);
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.talent-acquisition__pricing-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Partnerships */
+.talent-acquisition__partnerships {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-white);
+}
+
+.talent-acquisition__partnerships-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.talent-acquisition__partnership {
+  padding: var(--spacing-xl);
+  background-color: var(--color-gray-light);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.talent-acquisition__partnership h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-charcoal);
+}
+
+.talent-acquisition__partnership p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body-large);
+  color: var(--color-cloud-gray);
+  margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .talent-acquisition__value-grid,
+  .talent-acquisition__expertise-grid,
+  .talent-acquisition__levels-grid,
+  .talent-acquisition__pricing-info,
+  .talent-acquisition__partnerships-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .talent-acquisition__hero {
+    padding: var(--spacing-xxxl) 0 var(--spacing-xxl);
+  }
+
+  .talent-acquisition__title {
+    font-size: var(--font-size-h2);
+  }
+
+  .talent-acquisition__subtitle {
+    font-size: var(--font-size-body);
+  }
+
+  .talent-acquisition__hero-actions {
+    flex-direction: column;
+  }
+
+  .talent-acquisition__value-grid,
+  .talent-acquisition__expertise-grid,
+  .talent-acquisition__levels-grid,
+  .talent-acquisition__pricing-info,
+  .talent-acquisition__partnerships-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .talent-acquisition__section-title {
+    font-size: var(--font-size-h3);
+  }
+}

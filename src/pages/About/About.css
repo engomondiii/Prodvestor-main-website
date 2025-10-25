@@ -1,0 +1,258 @@
+/**
+ * PRODVESTOR WEBSITE - ABOUT PAGE STYLES
+ * FILE LOCATION: src/pages/About/About.css
+ */
+
+.about-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.about-page__hero {
+  padding: calc(var(--spacing-xxxl) * 2) 0 var(--spacing-xxxl);
+  background: linear-gradient(135deg, 
+    var(--color-primary) 0%, 
+    var(--color-accent) 100%);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.about-page__hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-page__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-page__subtitle {
+  font-size: var(--font-size-body-large);
+  line-height: var(--line-height-body-large);
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Vision & Mission Section */
+.about-page__vision-mission {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-white);
+}
+
+.about-page__vision-mission .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xxxl);
+  max-width: var(--container);
+}
+
+.about-page__section {
+  text-align: center;
+}
+
+.about-page__section-icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-page__section h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-charcoal);
+}
+
+.about-page__section p {
+  font-size: var(--font-size-body-large);
+  line-height: var(--line-height-body-large);
+  color: var(--color-cloud-gray);
+}
+
+.about-page__mission-list {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-lg) 0 0;
+}
+
+.about-page__mission-list li {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body-large);
+  color: var(--color-cloud-gray);
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.about-page__mission-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Core Pillars */
+.about-page__pillars {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-gray-light);
+}
+
+.about-page__section-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-charcoal);
+}
+
+.about-page__section-description {
+  font-size: var(--font-size-body-large);
+  text-align: center;
+  color: var(--color-cloud-gray);
+  max-width: 700px;
+  margin: 0 auto var(--spacing-xxxl);
+}
+
+.about-page__pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.about-page__pillar {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: transform var(--transition-standard);
+}
+
+.about-page__pillar:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-page__pillar-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.about-page__pillar h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-charcoal);
+}
+
+.about-page__pillar p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body-large);
+  color: var(--color-cloud-gray);
+  margin: 0;
+}
+
+/* Services Overview */
+.about-page__services-overview {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-white);
+}
+
+.about-page__services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.about-page__service {
+  padding: var(--spacing-xl);
+  background-color: var(--color-gray-light);
+  border-radius: var(--radius-lg);
+}
+
+.about-page__service-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.about-page__service h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-charcoal);
+}
+
+.about-page__service p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body-large);
+  color: var(--color-cloud-gray);
+  margin: 0;
+}
+
+/* Competitive Advantage */
+.about-page__advantage {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-gray-light);
+}
+
+.about-page__advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.about-page__advantage-item {
+  padding: var(--spacing-xl);
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-accent);
+}
+
+.about-page__advantage-item h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-charcoal);
+}
+
+.about-page__advantage-item p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body-large);
+  color: var(--color-cloud-gray);
+  margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .about-page__vision-mission .container,
+  .about-page__pillars-grid,
+  .about-page__services-grid,
+  .about-page__advantages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .about-page__hero {
+    padding: var(--spacing-xxxl) 0 var(--spacing-xxl);
+  }
+
+  .about-page__title {
+    font-size: var(--font-size-h2);
+  }
+
+  .about-page__subtitle {
+    font-size: var(--font-size-body);
+  }
+
+  .about-page__section-title {
+    font-size: var(--font-size-h3);
+  }
+}

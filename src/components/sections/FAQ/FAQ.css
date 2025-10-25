@@ -1,0 +1,103 @@
+/**
+ * PRODVESTOR WEBSITE - FAQ SECTION STYLES
+ * FILE LOCATION: src/components/sections/FAQ/FAQ.css
+ */
+
+.faq-section {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-gray-light);
+}
+
+.faq-section__container {
+  max-width: var(--container);
+}
+
+/* Header */
+.faq-section__header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xxxl);
+}
+
+.faq-section__subtitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.faq-section__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-md);
+}
+
+.faq-section__description {
+  font-size: var(--font-size-body-large);
+  color: var(--color-cloud-gray);
+  line-height: var(--line-height-body-large);
+}
+
+/* Categories */
+.faq-section__categories {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-xxxl);
+}
+
+.faq-section__category {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
+  border: 2px solid var(--color-silver);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.faq-section__category:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.faq-section__category--active {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-color: var(--color-accent);
+}
+
+/* FAQ List */
+.faq-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .faq-section {
+    padding: var(--spacing-xxl) 0;
+  }
+
+  .faq-section__header {
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  .faq-section__title {
+    font-size: var(--font-size-h3);
+  }
+
+  .faq-section__categories {
+    margin-bottom: var(--spacing-xxl);
+  }
+}

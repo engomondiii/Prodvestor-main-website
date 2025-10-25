@@ -1,0 +1,75 @@
+/**
+ * PRODVESTOR WEBSITE - SERVICE CARD STYLES
+ * FILE LOCATION: src/components/sections/Services/ServiceCard.css
+ */
+
+.service-card-link {
+  text-decoration: none;
+  display: block;
+}
+
+.service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-standard);
+}
+
+.service-card__icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.service-card__features {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-lg) 0;
+  flex: 1;
+}
+
+.service-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-body-small);
+  color: var(--color-cloud-gray);
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-card__feature:last-child {
+  margin-bottom: 0;
+}
+
+.service-card__feature-icon {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+.service-card__pricing {
+  padding-top: var(--spacing-md);
+  margin-top: auto;
+  border-top: 1px solid var(--color-gray-light);
+}
+
+.service-card__price {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+}
+
+.service-card__footer {
+  margin-top: var(--spacing-md);
+}
+
+.service-card__link {
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  transition: transform var(--transition-fast);
+  display: inline-block;
+}
+
+.service-card:hover .service-card__link {
+  transform: translateX(4px);
+}

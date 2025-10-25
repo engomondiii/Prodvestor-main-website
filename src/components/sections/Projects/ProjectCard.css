@@ -1,0 +1,101 @@
+/**
+ * PRODVESTOR WEBSITE - PROJECT CARD STYLES
+ * FILE LOCATION: src/components/sections/Projects/ProjectCard.css
+ */
+
+.project-card-link {
+  text-decoration: none;
+  display: block;
+}
+
+.project-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__content {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.project-card__header {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+}
+
+.project-card__client {
+  font-size: var(--font-size-body-small);
+  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+  margin: 0;
+}
+
+.project-card__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.project-card__tech {
+  padding: var(--spacing-xxs) var(--spacing-sm);
+  background-color: var(--color-gray-light);
+  color: var(--color-charcoal);
+  font-size: var(--font-size-body-small);
+  border-radius: var(--radius-sm);
+}
+
+.project-card__tech-more {
+  padding: var(--spacing-xxs) var(--spacing-sm);
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-sm);
+}
+
+.project-card__metrics {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  margin-top: auto;
+  border-top: 1px solid var(--color-gray-light);
+}
+
+.project-card__metric {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxs);
+}
+
+.project-card__metric-value {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-charcoal);
+}
+
+.project-card__metric-label {
+  font-size: var(--font-size-body-small);
+  color: var(--color-cloud-gray);
+}
+
+.project-card__footer {
+  margin-top: var(--spacing-md);
+}
+
+.project-card__link {
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  transition: transform var(--transition-fast);
+  display: inline-block;
+}
+
+.project-card:hover .project-card__link {
+  transform: translateX(4px);
+}

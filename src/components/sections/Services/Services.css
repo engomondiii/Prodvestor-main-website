@@ -1,0 +1,84 @@
+/**
+ * PRODVESTOR WEBSITE - SERVICES SECTION STYLES
+ * FILE LOCATION: src/components/sections/Services/Services.css
+ */
+
+.services-section {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-white);
+}
+
+.services-section__container {
+  max-width: var(--container-wide);
+}
+
+/* Header */
+.services-section__header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xxxl);
+}
+
+.services-section__subtitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.services-section__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-md);
+}
+
+.services-section__description {
+  font-size: var(--font-size-body-large);
+  color: var(--color-cloud-gray);
+  line-height: var(--line-height-body-large);
+}
+
+/* Grid */
+.services-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxxl);
+}
+
+/* Footer */
+.services-section__footer {
+  text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .services-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .services-section {
+    padding: var(--spacing-xxl) 0;
+  }
+
+  .services-section__header {
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  .services-section__title {
+    font-size: var(--font-size-h3);
+  }
+
+  .services-section__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xxl);
+  }
+}

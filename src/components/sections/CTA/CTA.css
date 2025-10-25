@@ -1,0 +1,86 @@
+/**
+ * PRODVESTOR WEBSITE - CTA SECTION STYLES
+ * FILE LOCATION: src/components/sections/CTA/CTA.css
+ */
+
+.cta-section {
+  padding: var(--spacing-xxxl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section--primary {
+  background: linear-gradient(135deg, 
+    var(--color-primary) 0%, 
+    var(--color-accent) 100%);
+  color: var(--color-white);
+}
+
+.cta-section--secondary {
+  background-color: var(--color-gray-light);
+}
+
+.cta-section--accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.cta-section__container {
+  max-width: var(--container);
+}
+
+.cta-section__content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-section__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-section--primary .cta-section__title,
+.cta-section--accent .cta-section__title {
+  color: var(--color-white);
+}
+
+.cta-section__description {
+  font-size: var(--font-size-body-large);
+  line-height: var(--line-height-body-large);
+  margin-bottom: var(--spacing-xl);
+}
+
+.cta-section--primary .cta-section__description,
+.cta-section--accent .cta-section__description {
+  color: var(--color-white);
+  opacity: 0.95;
+}
+
+.cta-section__actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .cta-section {
+    padding: var(--spacing-xxl) 0;
+  }
+
+  .cta-section__title {
+    font-size: var(--font-size-h3);
+  }
+
+  .cta-section__description {
+    font-size: var(--font-size-body);
+  }
+
+  .cta-section__actions {
+    flex-direction: column;
+  }
+}

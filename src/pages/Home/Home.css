@@ -1,0 +1,21 @@
+/**
+ * PRODVESTOR WEBSITE - HOME PAGE STYLES
+ * FILE LOCATION: src/pages/Home/Home.css
+ */
+
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure consistent spacing between sections */
+.home-page > section {
+  position: relative;
+}
+
+/* Mobile Optimization */
+@media (max-width: 767px) {
+  .home-page {
+    padding: 0;
+  }
+}

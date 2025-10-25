@@ -1,0 +1,116 @@
+/**
+ * PRODVESTOR WEBSITE - NEWSLETTER SECTION STYLES
+ * FILE LOCATION: src/components/sections/Newsletter/Newsletter.css
+ */
+
+.newsletter-section {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-gray-light);
+}
+
+.newsletter-section--primary {
+  background: linear-gradient(135deg, 
+    var(--color-primary) 0%, 
+    var(--color-accent) 100%);
+}
+
+.newsletter-section--accent {
+  background-color: var(--color-accent);
+}
+
+.newsletter-section__container {
+  max-width: var(--container);
+}
+
+.newsletter-section__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xxxl);
+  align-items: center;
+}
+
+.newsletter-section__text {
+  max-width: 500px;
+}
+
+.newsletter-section__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-md);
+}
+
+.newsletter-section--primary .newsletter-section__title,
+.newsletter-section--accent .newsletter-section__title {
+  color: var(--color-white);
+}
+
+.newsletter-section__description {
+  font-size: var(--font-size-body-large);
+  color: var(--color-cloud-gray);
+  line-height: var(--line-height-body-large);
+  margin: 0;
+}
+
+.newsletter-section--primary .newsletter-section__description,
+.newsletter-section--accent .newsletter-section__description {
+  color: var(--color-white);
+  opacity: 0.95;
+}
+
+.newsletter-section__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.newsletter-section__form {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.newsletter-section__privacy {
+  font-size: var(--font-size-body-small);
+  color: var(--color-cloud-gray);
+  text-align: center;
+  margin: 0;
+}
+
+.newsletter-section--primary .newsletter-section__privacy,
+.newsletter-section--accent .newsletter-section__privacy {
+  color: var(--color-white);
+  opacity: 0.9;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .newsletter-section__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xxl);
+    text-align: center;
+  }
+
+  .newsletter-section__text {
+    max-width: 100%;
+  }
+
+  .newsletter-section__form {
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .newsletter-section {
+    padding: var(--spacing-xxl) 0;
+  }
+
+  .newsletter-section__title {
+    font-size: var(--font-size-h3);
+  }
+
+  .newsletter-section__description {
+    font-size: var(--font-size-body);
+  }
+}

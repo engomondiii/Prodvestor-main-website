@@ -1,0 +1,80 @@
+/**
+ * PRODVESTOR WEBSITE - SCROLL TO TOP STYLES
+ * FILE LOCATION: src/components/common/ScrollToTop/ScrollToTop.css
+ */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-circle);
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--transition-standard);
+  z-index: var(--z-index-floating);
+}
+
+.scroll-to-top--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px);
+}
+
+.scroll-to-top__icon {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .scroll-to-top {
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    width: 44px;
+    height: 44px;
+  }
+
+  .scroll-to-top__icon {
+    font-size: 1.25rem;
+  }
+}
+
+/* Focus */
+.scroll-to-top:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-to-top {
+    transition: opacity var(--transition-standard),
+                visibility var(--transition-standard);
+  }
+
+  .scroll-to-top:hover {
+    transform: none;
+  }
+}

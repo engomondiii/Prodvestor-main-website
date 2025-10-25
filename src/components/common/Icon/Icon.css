@@ -1,0 +1,66 @@
+/**
+ * PRODVESTOR WEBSITE - ICON STYLES
+ * FILE LOCATION: src/components/common/Icon/Icon.css
+ */
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  user-select: none;
+}
+
+/* Sizes */
+.icon--small {
+  font-size: 1rem;
+  width: 16px;
+  height: 16px;
+}
+
+.icon--medium {
+  font-size: 1.25rem;
+  width: 20px;
+  height: 20px;
+}
+
+.icon--large {
+  font-size: 1.5rem;
+  width: 24px;
+  height: 24px;
+}
+
+.icon--xlarge {
+  font-size: 2rem;
+  width: 32px;
+  height: 32px;
+}
+
+/* Colors */
+.icon--primary {
+  color: var(--color-accent);
+}
+
+.icon--secondary {
+  color: var(--color-charcoal);
+}
+
+.icon--success {
+  color: #28a745;
+}
+
+.icon--warning {
+  color: #ffc107;
+}
+
+.icon--danger {
+  color: #dc3545;
+}
+
+.icon--muted {
+  color: var(--color-cloud-gray);
+}
+
+.icon--white {
+  color: var(--color-white);
+}

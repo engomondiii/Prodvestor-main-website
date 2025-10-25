@@ -1,0 +1,116 @@
+/**
+ * PRODVESTOR WEBSITE - TEXTAREA STYLES
+ * FILE LOCATION: src/components/common/TextArea/TextArea.css
+ */
+
+.textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.textarea-wrapper--full-width {
+  width: 100%;
+}
+
+/* Label */
+.textarea__label {
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-xxs);
+}
+
+.textarea__required {
+  color: #dc3545;
+  margin-left: 2px;
+}
+
+/* TextArea */
+.textarea {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body-large);
+  color: var(--color-charcoal);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-silver);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.textarea:hover:not(:disabled) {
+  border-color: var(--color-cloud-gray);
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(0, 116, 217, 0.1);
+}
+
+.textarea::placeholder {
+  color: var(--color-cloud-gray);
+}
+
+/* Resize Options */
+.textarea--resize-none {
+  resize: none;
+}
+
+.textarea--resize-vertical {
+  resize: vertical;
+}
+
+.textarea--resize-horizontal {
+  resize: horizontal;
+}
+
+.textarea--resize-both {
+  resize: both;
+}
+
+/* States */
+.textarea:disabled {
+  background-color: var(--color-gray-light);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.textarea-wrapper--error .textarea {
+  border-color: #dc3545;
+}
+
+.textarea-wrapper--error .textarea:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+/* Character Count */
+.textarea__count {
+  font-size: var(--font-size-body-small);
+  color: var(--color-cloud-gray);
+  text-align: right;
+  margin-top: var(--spacing-xxs);
+}
+
+/* Messages */
+.textarea__error,
+.textarea__helper {
+  font-size: var(--font-size-body-small);
+  margin-top: var(--spacing-xxs);
+}
+
+.textarea__error {
+  color: #dc3545;
+}
+
+.textarea__helper {
+  color: var(--color-cloud-gray);
+}
+
+/* Focus Visible */
+.textarea:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: -2px;
+}

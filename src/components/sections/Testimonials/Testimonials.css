@@ -1,0 +1,77 @@
+/**
+ * PRODVESTOR WEBSITE - TESTIMONIALS SECTION STYLES
+ * FILE LOCATION: src/components/sections/Testimonials/Testimonials.css
+ */
+
+.testimonials-section {
+  padding: var(--spacing-xxxl) 0;
+  background-color: var(--color-white);
+}
+
+.testimonials-section__container {
+  max-width: var(--container-wide);
+}
+
+/* Header */
+.testimonials-section__header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xxxl);
+}
+
+.testimonials-section__subtitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.testimonials-section__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-md);
+}
+
+.testimonials-section__description {
+  font-size: var(--font-size-body-large);
+  color: var(--color-cloud-gray);
+  line-height: var(--line-height-body-large);
+}
+
+/* Grid */
+.testimonials-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .testimonials-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .testimonials-section {
+    padding: var(--spacing-xxl) 0;
+  }
+
+  .testimonials-section__header {
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  .testimonials-section__title {
+    font-size: var(--font-size-h3);
+  }
+
+  .testimonials-section__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}

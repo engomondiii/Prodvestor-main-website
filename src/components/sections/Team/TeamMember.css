@@ -1,0 +1,105 @@
+/**
+ * PRODVESTOR WEBSITE - TEAM MEMBER CARD STYLES
+ * FILE LOCATION: src/components/sections/Team/TeamMember.css
+ */
+
+.team-member {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-member__image {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.team-member__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-standard);
+}
+
+.team-member:hover .team-member__image img {
+  transform: scale(1.1);
+}
+
+.team-member__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.team-member__name {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+.team-member__role {
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.team-member__bio {
+  font-size: var(--font-size-body-small);
+  color: var(--color-cloud-gray);
+  line-height: var(--line-height-body-large);
+  margin: var(--spacing-sm) 0;
+}
+
+.team-member__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  justify-content: center;
+  margin-top: auto;
+  padding-top: var(--spacing-md);
+}
+
+.team-member__skill {
+  padding: var(--spacing-xxs) var(--spacing-sm);
+  background-color: var(--color-gray-light);
+  color: var(--color-charcoal);
+  font-size: var(--font-size-body-small);
+  border-radius: var(--radius-sm);
+}
+
+.team-member__social {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-gray-light);
+}
+
+.team-member__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-gray-light);
+  color: var(--color-charcoal);
+  border-radius: var(--radius-circle);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-fast);
+}
+
+.team-member__social-link:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}

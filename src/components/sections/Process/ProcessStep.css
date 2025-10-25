@@ -1,0 +1,77 @@
+/**
+ * PRODVESTOR WEBSITE - PROCESS STEP STYLES
+ * FILE LOCATION: src/components/sections/Process/ProcessStep.css
+ */
+
+.process-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-lg);
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-standard);
+}
+
+.process-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.process-step__number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-circle);
+}
+
+.process-step__icon {
+  font-size: 3rem;
+  margin: var(--spacing-md) 0;
+}
+
+.process-step__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-charcoal);
+  margin-bottom: var(--spacing-sm);
+}
+
+.process-step__description {
+  font-size: var(--font-size-body);
+  color: var(--color-cloud-gray);
+  line-height: var(--line-height-body-large);
+  margin: 0;
+}
+
+.process-step__connector {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: var(--color-accent);
+  z-index: 1;
+}
+
+/* Mobile - hide connector */
+@media (max-width: 767px) {
+  .process-step__connector {
+    display: none;
+  }
+}
