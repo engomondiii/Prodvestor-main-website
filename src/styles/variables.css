@@ -29,7 +29,7 @@
   /* Neutral Tones */
   --color-gray-light: #F8F9FA;        /* Page backgrounds, alternating sections */
   --color-silver: #E8E8E8;            /* Input fields, borders */
-  --color-cloud-gray: #BFBFBF;        /* Disabled states, subtle text */
+  --color-cloud-gray: #4a5568;        /* Disabled states, subtle text */
   --color-off-white: #FAFAFA;         /* Card backgrounds, hover effects */
   
   /* Success & Status Colors */

@@ -1,11 +1,11 @@
 /**
- * PRODVESTOR WEBSITE - HEADER COMPONENT
- * Main navigation header with responsive mobile menu
+ * PRODVESTOR WEBSITE - HEADER COMPONENT (MODERNIZED)
+ * Main navigation header with glassmorphism and smooth animations
  * 
  * FILE LOCATION: src/components/layout/Header/Header.js
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { mainNavigation, ctaButtons } from '../../../data/navigation';
 import './Header.css';
@@ -15,11 +15,13 @@ function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
+  const dropdownTimeoutRef = useRef(null);
 
-  // Handle scroll effect for sticky header
+  // Handle scroll effect for sticky header with smooth transition
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -69,8 +71,35 @@ function Header() {
     setActiveDropdown(activeDropdown === itemId ? null : itemId);
   };
 
+  const handleDropdownMouseEnter = (itemId) => {
+    // Clear any pending close timeout
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setActiveDropdown(itemId);
+  };
+
+  const handleDropdownMouseLeave = () => {
+    // Delay closing to allow smooth transition to dropdown
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 150);
+  };
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+    };
+  }, []);
+
   const isActivePath = (path) => {
-    return location.pathname === path;
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
   };
 
   return (
@@ -92,6 +121,8 @@ function Header() {
                 className={`header__nav-item ${
                   item.dropdown ? 'header__nav-item--dropdown' : ''
                 } ${isActivePath(item.path) ? 'header__nav-item--active' : ''}`}
+                onMouseEnter={() => item.dropdown && handleDropdownMouseEnter(item.id)}
+                onMouseLeave={() => item.dropdown && handleDropdownMouseLeave()}
               >
                 {item.dropdown ? (
                   <>
@@ -105,7 +136,15 @@ function Header() {
                       <span className="header__dropdown-arrow">▼</span>
                     </button>
                     {activeDropdown === item.id && (
-                      <ul className="header__dropdown">
+                      <ul 
+                        className="header__dropdown"
+                        onMouseEnter={() => {
+                          if (dropdownTimeoutRef.current) {
+                            clearTimeout(dropdownTimeoutRef.current);
+                          }
+                        }}
+                        onMouseLeave={handleDropdownMouseLeave}
+                      >
                         {item.dropdown.map((subItem) => (
                           <li
                             key={subItem.id}
@@ -166,7 +205,7 @@ function Header() {
         <button
           className="header__mobile-toggle show-mobile"
           onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isMobileMenuOpen}
         >
           <span className={`header__hamburger ${isMobileMenuOpen ? 'header__hamburger--open' : ''}`}>
@@ -181,6 +220,7 @@ function Header() {
       <div
         className={`header__overlay ${isMobileMenuOpen ? 'header__overlay--visible' : ''}`}
         onClick={toggleMobileMenu}
+        aria-hidden="true"
       />
 
       {/* Mobile Navigation */}

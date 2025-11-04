@@ -4,7 +4,8 @@
  */
 
 import React from 'react';
-import Button from '../../components/Button';
+import Button from '../../components/common/Button';
+
 import Stats from '../../components/sections/Stats';
 import Projects from '../../components/sections/Projects';
 import Process from '../../components/sections/Process';

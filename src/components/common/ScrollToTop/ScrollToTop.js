@@ -1,50 +1,20 @@
 /**
  * PRODVESTOR WEBSITE - SCROLL TO TOP COMPONENT
- * FILE LOCATION: src/components/common/ScrollToTop/ScrollToTop.js
+ * Automatically scrolls to top when route changes
+ * FILE LOCATION: src/components/common/ScrollToTop.js
  */
 
-import React, { useState, useEffect } from 'react';
-import './ScrollToTop.css';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-function ScrollToTop({
-  showAt = 300,
-  smooth = true,
-  className = '',
-  ...props
-}) {
-  const [isVisible, setIsVisible] = useState(false);
+function ScrollToTop() {
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > showAt) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [showAt]);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: smooth ? 'smooth' : 'auto'
-    });
-  };
-
-  return (
-    <button
-      type="button"
-      className={`scroll-to-top ${isVisible ? 'scroll-to-top--visible' : ''} ${className}`}
-      onClick={scrollToTop}
-      aria-label="Scroll to top"
-      {...props}
-    >
-      <span className="scroll-to-top__icon">↑</span>
-    </button>
-  );
+  return null;
 }
 
 export default ScrollToTop;

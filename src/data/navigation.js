@@ -21,41 +21,34 @@ export const mainNavigation = [
     dropdown: [
       {
         id: 21,
-        label: 'Custom Software Development',
-        path: '/services/custom-software-development',
-        icon: '💻',
-        description: 'Tailored solutions for your business'
+        label: 'Talent Acquisition',
+        path: '/services/talent-acquisition',
+        icon: '👥',
+        description: 'Elite developers from emerging markets'
       },
       {
         id: 22,
-        label: 'Web Development',
-        path: '/services/web-development',
-        icon: '🌐',
-        description: 'Modern websites and web apps'
+        label: 'Project Development',
+        path: '/services/project-development',
+        icon: '💻',
+        description: 'Innovative technology solutions'
       },
       {
         id: 23,
-        label: 'Mobile App Development',
-        path: '/services/mobile-app-development',
-        icon: '📱',
-        description: 'iOS and Android applications'
+        label: 'IT Consultation',
+        path: '/services/it-consultation',
+        icon: '💡',
+        description: 'Expert technical guidance'
       },
       {
         id: 24,
-        label: 'UI/UX Design',
-        path: '/services/ui-ux-design',
-        icon: '🎨',
-        description: 'Beautiful, intuitive interfaces'
+        label: 'Training & Mentorship',
+        path: '/services/training',
+        icon: '🎓',
+        description: 'Developer empowerment programs'
       },
       {
         id: 25,
-        label: 'Cloud Solutions',
-        path: '/services/cloud-solutions',
-        icon: '☁️',
-        description: 'Scalable cloud infrastructure'
-      },
-      {
-        id: 26,
         label: 'View All Services',
         path: '/services',
         icon: '→',
@@ -86,7 +79,7 @@ export const mainNavigation = [
       {
         id: 42,
         label: 'Our Team',
-        path: '/about/team',
+        path: '/team',
         icon: '👥'
       },
       {
@@ -115,11 +108,10 @@ export const footerNavigation = {
     { label: 'Contact', path: '/contact' }
   ],
   services: [
-    { label: 'Custom Software', path: '/services/custom-software-development' },
-    { label: 'Web Development', path: '/services/web-development' },
-    { label: 'Mobile Apps', path: '/services/mobile-app-development' },
-    { label: 'UI/UX Design', path: '/services/ui-ux-design' },
-    { label: 'Cloud Solutions', path: '/services/cloud-solutions' }
+    { label: 'Talent Acquisition', path: '/services/talent-acquisition' },
+    { label: 'Project Development', path: '/services/project-development' },
+    { label: 'IT Consultation', path: '/services/it-consultation' },
+    { label: 'Training & Mentorship', path: '/services/training' }
   ],
   resources: [
     { label: 'Portfolio', path: '/portfolio' },

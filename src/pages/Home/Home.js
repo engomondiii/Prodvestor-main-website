@@ -1,5 +1,5 @@
 /**
- * PRODVESTOR WEBSITE - HOME PAGE
+ * PRODVESTOR WEBSITE - HOME PAGE (UPDATED)
  * FILE LOCATION: src/pages/Home/Home.js
  */
 
@@ -21,6 +21,7 @@ function Home() {
       <Hero
         subtitle="Bridging Talent with Innovation"
         title="Empowering Global Tech Through African Excellence"
+        highlightText="African Excellence"
         description="We connect skilled software developers from emerging markets with global opportunities while building innovative solutions that transform industries. From talent acquisition to cutting-edge project development, we're reshaping the future of technology."
         primaryCTA={{
           text: 'Partner With Us',
@@ -29,6 +30,12 @@ function Home() {
         secondaryCTA={{
           text: 'Explore Our Services',
           link: '/services'
+        }}
+        image="assets/images/hero/hero1.jpg"
+        floatingBadge={{
+          icon: '⭐',
+          title: 'Industry Leading',
+          text: '98% Client Satisfaction'
         }}
       />
 

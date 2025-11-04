@@ -52,13 +52,13 @@ export const projects = [
     year: 2023,
     featured: true,
     images: {
-      thumbnail: '/images/projects/fintech-app-thumb.jpg',
-      hero: '/images/projects/fintech-app-hero.jpg',
+      thumbnail: '/assets/images/hero/hero.jpg',
+      hero: '/assets/images/hero/hero.jpg',
       gallery: [
-        '/images/projects/fintech-app-1.jpg',
-        '/images/projects/fintech-app-2.jpg',
-        '/images/projects/fintech-app-3.jpg',
-        '/images/projects/fintech-app-4.jpg'
+        '/assets/images/hero/hero.jpg',
+        '/assets/images/hero/hero.jpg',
+        '/assets/images/hero/hero.jpg',
+        '/assets/images/hero/hero.jpg',
       ]
     },
     testimonial: {
@@ -441,3 +441,29 @@ export const searchProjects = (keyword) => {
 };
 
 export default projects;
+/**
+ * ====================================================================
+ * ADDITIONAL EXPORTS - Added to fix import errors
+ * ====================================================================
+ */
+
+/**
+ * Get all projects (alias function)
+ * Used by: ProjectGallery.js
+ */
+export const getAllProjects = () => {
+  return projects;
+};
+
+/**
+ * Export project categories as constant array
+ * Used by: ProjectGallery.js, ProjectFilter.js
+ */
+export const projectCategories = [
+  { id: 'all', label: 'All Projects', value: 'all' },
+  { id: 'web', label: 'Web Development', value: 'Web App' },
+  { id: 'mobile', label: 'Mobile Apps', value: 'Mobile App' },
+  { id: 'ai', label: 'AI & Machine Learning', value: 'AI/ML' },
+  { id: 'blockchain', label: 'Blockchain', value: 'Blockchain' },
+  { id: 'saas', label: 'SaaS Platforms', value: 'SaaS' }
+];

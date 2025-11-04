@@ -1,5 +1,5 @@
 /**
- * PRODVESTOR WEBSITE - SERVICE CARD COMPONENT
+ * PRODVESTOR WEBSITE - SERVICE CARD COMPONENT (MODERN)
  * FILE LOCATION: src/components/sections/Services/ServiceCard.js
  */
 
@@ -12,6 +12,12 @@ function ServiceCard({ service }) {
   return (
     <Link to={`/services/${service.slug}`} className="service-card-link">
       <Card variant="elevated" hoverable className="service-card">
+        
+        {/* Optional badge for popular/featured services */}
+        {service.badge && (
+          <span className="service-card__badge">{service.badge}</span>
+        )}
+        
         <div className="service-card__icon">{service.icon}</div>
         
         <Card.Title>{service.title}</Card.Title>
@@ -32,14 +38,14 @@ function ServiceCard({ service }) {
         {service.pricing && (
           <div className="service-card__pricing">
             <span className="service-card__price">
-              Starting from ${service.pricing.startingFrom.toLocaleString()}
+              From ${service.pricing.startingFrom.toLocaleString()}
             </span>
           </div>
         )}
 
         <div className="service-card__footer">
           <span className="service-card__link">
-            Learn More →
+            Learn More
           </span>
         </div>
       </Card>

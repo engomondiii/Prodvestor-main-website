@@ -18,7 +18,7 @@ function ProjectFilter({ categories, activeCategory, onFilterChange }) {
         All Projects
       </button>
       
-      {categories.map((category) => (
+      {categories.filter(cat => cat !== 'all').map((category) => (
         <button
           key={category}
           className={`project-filter__button ${

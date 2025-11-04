@@ -1,5 +1,5 @@
 /**
- * PRODVESTOR WEBSITE - HERO SECTION
+ * PRODVESTOR WEBSITE - HERO SECTION (MODERNIZED)
  * FILE LOCATION: src/components/sections/Hero/Hero.js
  */
 
@@ -18,6 +18,8 @@ function Hero({
   backgroundImage,
   variant = 'default',
   className = '',
+  floatingBadge,
+  highlightText,
   ...props
 }) {
   const classes = [
@@ -28,6 +30,24 @@ function Hero({
   ]
     .filter(Boolean)
     .join(' ');
+
+  // Function to add gradient highlights to title
+  const renderTitle = () => {
+    if (!title) return 'Building Digital Solutions That Transform Businesses';
+    
+    if (highlightText && title.includes(highlightText)) {
+      const parts = title.split(highlightText);
+      return (
+        <>
+          {parts[0]}
+          <span className="highlight">{highlightText}</span>
+          {parts[1]}
+        </>
+      );
+    }
+    
+    return title;
+  };
 
   return (
     <section className={classes} {...props}>
@@ -43,7 +63,7 @@ function Hero({
           {subtitle && <p className="hero__subtitle">{subtitle}</p>}
           
           <h1 className="hero__title">
-            {title || 'Building Digital Solutions That Transform Businesses'}
+            {renderTitle()}
           </h1>
           
           <p className="hero__description">
@@ -52,7 +72,9 @@ function Hero({
 
           <div className="hero__actions">
             {primaryCTA ? (
-              primaryCTA
+              <Button to={primaryCTA.link} size="large" variant="primary">
+                {primaryCTA.text}
+              </Button>
             ) : (
               <Button to="/contact" size="large" variant="primary">
                 Get Started
@@ -60,7 +82,9 @@ function Hero({
             )}
             
             {secondaryCTA ? (
-              secondaryCTA
+              <Button to={secondaryCTA.link} size="large" variant="outline">
+                {secondaryCTA.text}
+              </Button>
             ) : (
               <Button to="/portfolio" size="large" variant="outline">
                 View Our Work
@@ -86,7 +110,26 @@ function Hero({
 
         {image && (
           <div className="hero__image">
-            <img src={image} alt="Hero" />
+            {/* Decorative dots pattern */}
+            <div className="hero__dots" />
+            
+            {/* Main image wrapper with 3D effect */}
+            <div className="hero__image-wrapper">
+              <img src={image} alt="Hero" />
+            </div>
+
+            {/* Floating badge (optional) */}
+            {floatingBadge && (
+              <div className="hero__floating-badge">
+                <div className="hero__badge-icon">
+                  {floatingBadge.icon || '🚀'}
+                </div>
+                <div className="hero__badge-content">
+                  <h4>{floatingBadge.title || 'Trusted Partner'}</h4>
+                  <p>{floatingBadge.text || '100% Success Rate'}</p>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>

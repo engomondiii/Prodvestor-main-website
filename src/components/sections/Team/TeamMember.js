@@ -8,11 +8,19 @@ import Card from '../../common/Card';
 import './TeamMember.css';
 
 function TeamMember({ member }) {
+  // Generate placeholder image URL using UI Avatars API
+  const getPlaceholderImage = (name) => {
+    const encodedName = encodeURIComponent(name);
+    return `https://ui-avatars.com/api/?name=${encodedName}&size=400&background=007bff&color=ffffff&bold=true&format=svg`;
+  };
+
+  const imageUrl = member.image || getPlaceholderImage(member.name);
+
   return (
     <Card variant="elevated" hoverable className="team-member">
       <div className="team-member__image">
         <img 
-          src={member.image || '/images/team/placeholder.jpg'} 
+          src={imageUrl} 
           alt={member.name} 
         />
       </div>
