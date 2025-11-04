@@ -25,13 +25,13 @@ function ProjectDetails() {
     );
   }
 
-  // Generate placeholder image if none provided
-  const getPlaceholderImage = (title) => {
-    const encodedTitle = encodeURIComponent(title);
-    return `https://ui-avatars.com/api/?name=${encodedTitle}&size=1200&background=007bff&color=ffffff&bold=true&format=svg`;
+  // Use actual project image or a default placeholder image
+  const getDefaultImage = () => {
+    // Use a generic tech/project placeholder image
+    return 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=600&fit=crop';
   };
 
-  const mainImage = project.images?.main || project.image || project.thumbnail || getPlaceholderImage(project.title);
+  const heroImage = project.images?.main || project.image || project.thumbnail || getDefaultImage();
 
   return (
     <div className="project-details-page">
@@ -47,7 +47,8 @@ function ProjectDetails() {
       {/* Hero with Large Image */}
       <section className="project-details__hero">
         <div className="project-details__hero-image">
-          <img src={mainImage} alt={project.title} />
+          <img src={heroImage} alt={project.title} />
+          <div className="project-details__hero-gradient"></div>
         </div>
         <div className="project-details__hero-overlay">
           <div className="container">

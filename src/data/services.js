@@ -54,7 +54,7 @@ export const services = [
     category: 'Development',
     featured: true,
     popular: true,
-    image: '/images/services/custom-software.jpg',
+    image: '/assets/images/services/custom-software.jpg',
     caseStudies: [1, 3], // IDs of related case studies
     relatedServices: [2, 5]
   },
@@ -102,7 +102,7 @@ export const services = [
     category: 'Development',
     featured: true,
     popular: true,
-    image: '/images/services/web-development.jpg',
+    image: '/assets/images/services/web-development.jpg',
     caseStudies: [2],
     relatedServices: [1, 3]
   },
@@ -148,7 +148,7 @@ export const services = [
     category: 'Development',
     featured: true,
     popular: true,
-    image: '/images/services/mobile-app.jpg',
+    image: '/assets/images/services/mobile-app.jpg',
     caseStudies: [1],
     relatedServices: [1, 4]
   },
@@ -193,7 +193,7 @@ export const services = [
     category: 'Design',
     featured: true,
     popular: false,
-    image: '/images/services/ui-ux-design.jpg',
+    image: '/assets/images/services/ui-ux-design.jpg',
     caseStudies: [2, 3],
     relatedServices: [2, 3]
   },
@@ -240,7 +240,7 @@ export const services = [
     category: 'Infrastructure',
     featured: false,
     popular: true,
-    image: '/images/services/cloud-solutions.jpg',
+    image: '/assets/images/services/cloud-solutions.jpg',
     caseStudies: [1],
     relatedServices: [1, 6]
   },
@@ -280,7 +280,7 @@ export const services = [
     category: 'Consulting',
     featured: false,
     popular: false,
-    image: '/images/services/it-consulting.jpg',
+    image: '/assets/images/services/it-consulting.jpg',
     caseStudies: [],
     relatedServices: [1, 5]
   },
@@ -326,7 +326,7 @@ export const services = [
     category: 'Development',
     featured: false,
     popular: true,
-    image: '/images/services/api-integration.jpg',
+    image: '/assets/images/services/api-integration.jpg',
     caseStudies: [1],
     relatedServices: [1, 5]
   },
@@ -366,7 +366,7 @@ export const services = [
     category: 'Support',
     featured: false,
     popular: true,
-    image: '/images/services/maintenance-support.jpg',
+    image: '/assets/images/services/maintenance-support.jpg',
     caseStudies: [],
     relatedServices: [1, 2, 3]
   }

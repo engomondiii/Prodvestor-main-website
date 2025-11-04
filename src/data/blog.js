@@ -16,7 +16,7 @@ export const blogPosts = [
     `,
     author: {
       name: 'John Doe',
-      avatar: '/images/team/team-member-1.jpg',
+      avatar: '/assets/images/team/team-member-1.jpg',
       role: 'Senior Developer'
     },
     category: 'Technology',
@@ -24,7 +24,7 @@ export const blogPosts = [
     publishedDate: '2024-10-15',
     readTime: '8 min read',
     featured: true,
-    image: '/images/blog/ai-development.jpg'
+    image: '/assets/images/blog/ai-development.jpg'
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ export const blogPosts = [
     `,
     author: {
       name: 'Jane Smith',
-      avatar: '/images/team/team-member-2.jpg',
+      avatar: '/assets/images/team/team-member-2.jpg',
       role: 'CTO'
     },
     category: 'Development',
@@ -44,7 +44,7 @@ export const blogPosts = [
     publishedDate: '2024-10-10',
     readTime: '12 min read',
     featured: true,
-    image: '/images/blog/saas-scalability.jpg'
+    image: '/assets/images/blog/saas-scalability.jpg'
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ export const blogPosts = [
     `,
     author: {
       name: 'Mike Johnson',
-      avatar: '/images/team/team-member-3.jpg',
+      avatar: '/assets/images/team/team-member-3.jpg',
       role: 'Project Manager'
     },
     category: 'Team Management',
@@ -64,7 +64,7 @@ export const blogPosts = [
     publishedDate: '2024-10-05',
     readTime: '6 min read',
     featured: false,
-    image: '/images/blog/remote-work.jpg'
+    image: '/assets/images/blog/remote-work.jpg'
   }
 ];
 

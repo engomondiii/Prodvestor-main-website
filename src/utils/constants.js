@@ -154,7 +154,7 @@ export const SEO = {
   DEFAULT_TITLE: 'Prodvestor | Bridging Talent with Innovation',
   DEFAULT_DESCRIPTION: 'Prodvestor connects elite software developers from emerging markets with global opportunities while building innovative technology solutions across healthcare, education, sustainability, and beyond.',
   DEFAULT_KEYWORDS: 'software development, talent acquisition, Kenya developers, project development, IT consultation, tech training, AI development, blockchain solutions',
-  DEFAULT_OG_IMAGE: '/images/og-image.jpg',
+  DEFAULT_OG_IMAGE: '/assets/images/og-image.jpg',
   SITE_NAME: 'Prodvestor',
   TWITTER_HANDLE: '@prodvestor'
 };

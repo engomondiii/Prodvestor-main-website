@@ -1,5 +1,5 @@
 /**
- * PRODVESTOR WEBSITE - CONTACT INFO STYLES
+ * PRODVESTOR WEBSITE - CONTACT INFO STYLES (UPDATED WITH ICON BUTTONS)
  * FILE LOCATION: src/components/sections/Contact/ContactInfo.css
  */
 
@@ -23,7 +23,7 @@
   line-height: var(--line-height-body-large);
 }
 
-.contact-info__details {
+.contact-info__details { 
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
@@ -78,26 +78,136 @@
 
 .contact-info__social-links {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
   flex-wrap: wrap;
 }
 
+/* Icon-Only Social Buttons */
 .contact-info__social-link {
-  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-sm) var(--spacing-md);
-  background-color: var(--color-gray-light);
-  color: var(--color-charcoal);
-  font-size: var(--font-size-body-small);
-  font-weight: var(--font-weight-medium);
+  padding: 0;
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
   text-decoration: none;
-  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-info__social-link svg {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  z-index: 1;
   transition: all var(--transition-fast);
 }
 
+/* Platform-Specific Default Colors */
+/* LinkedIn - Blue */
+.contact-info__social-link--linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #005582 100%);
+}
+
+/* Twitter/X - Black */
+.contact-info__social-link--twitter {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+/* GitHub - Dark Gray */
+.contact-info__social-link--github {
+  background: linear-gradient(135deg, #333333 0%, #24292e 100%);
+}
+
+/* Facebook - Blue */
+.contact-info__social-link--facebook {
+  background: linear-gradient(135deg, #1877f2 0%, #0d5dbf 100%);
+}
+
+/* Instagram - Gradient */
+.contact-info__social-link--instagram {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+}
+
+/* Hover Effects - Lift and Shadow */
 .contact-info__social-link:hover {
-  background-color: var(--color-accent);
-  color: var(--color-white);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.contact-info__social-link--linkedin:hover {
+  box-shadow: 0 8px 20px rgba(0, 119, 181, 0.4);
+}
+
+.contact-info__social-link--twitter:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-info__social-link--github:hover {
+  box-shadow: 0 8px 20px rgba(51, 51, 51, 0.4);
+}
+
+.contact-info__social-link--facebook:hover {
+  box-shadow: 0 8px 20px rgba(24, 119, 242, 0.4);
+}
+
+.contact-info__social-link--instagram:hover {
+  box-shadow: 0 8px 20px rgba(131, 58, 180, 0.4);
+}
+
+/* Active State */
+.contact-info__social-link:active {
   transform: translateY(-2px);
+}
+
+/* Focus State for Accessibility */
+.contact-info__social-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .contact-info__social-link {
+    width: 44px;
+    height: 44px;
+  }
+
+  .contact-info__social-link svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .contact-info__social-links {
+    gap: var(--spacing-sm);
+  }
+
+  .contact-info__social-link {
+    width: 42px;
+    height: 42px;
+  }
+
+  .contact-info__social-link svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .contact-info__social-link {
+    transition: none;
+  }
+  
+  .contact-info__social-link:hover {
+    transform: none;
+  }
 }

@@ -65,7 +65,7 @@ export const projects = [
       quote: "Prodvestor delivered an exceptional mobile banking solution that exceeded our expectations. The app is secure, fast, and our customers love it.",
       author: 'Sarah Johnson',
       position: 'CTO, SecureBank Solutions',
-      avatar: '/images/testimonials/sarah-johnson.jpg'
+      avatar: '/assets/images/testimonials/sarah-johnson.jpg'
     },
     link: 'https://example.com', // Optional external link
     status: 'Live',
@@ -113,19 +113,19 @@ export const projects = [
     year: 2023,
     featured: true,
     images: {
-      thumbnail: '/images/projects/ecommerce-thumb.jpg',
-      hero: '/images/projects/ecommerce-hero.jpg',
+      thumbnail: '/assets/images/projects/ecommerce-thumb.jpg',
+      hero: '/assets/images/projects/ecommerce-hero.jpg',
       gallery: [
-        '/images/projects/ecommerce-1.jpg',
-        '/images/projects/ecommerce-2.jpg',
-        '/images/projects/ecommerce-3.jpg'
+        '/assets/images/projects/ecommerce-1.jpg',
+        '/assets/images/projects/ecommerce-2.jpg',
+        '/assets/images/projects/ecommerce-3.jpg'
       ]
     },
     testimonial: {
       quote: "The new platform transformed our online business. Sales are up, customers are happy, and managing inventory is so much easier now.",
       author: 'Michael Chen',
       position: 'CEO, StyleHub Fashion',
-      avatar: '/images/testimonials/michael-chen.jpg'
+      avatar: '/assets/images/testimonials/michael-chen.jpg'
     },
     link: 'https://example.com',
     status: 'Live',
@@ -173,19 +173,19 @@ export const projects = [
     year: 2022,
     featured: true,
     images: {
-      thumbnail: '/images/projects/healthcare-thumb.jpg',
-      hero: '/images/projects/healthcare-hero.jpg',
+      thumbnail: '/assets/images/projects/healthcare-thumb.jpg',
+      hero: '/assets/images/projects/healthcare-hero.jpg',
       gallery: [
-        '/images/projects/healthcare-1.jpg',
-        '/images/projects/healthcare-2.jpg',
-        '/images/projects/healthcare-3.jpg'
+        '/assets/images/projects/healthcare-1.jpg',
+        '/assets/images/projects/healthcare-2.jpg',
+        '/assets/images/projects/healthcare-3.jpg'
       ]
     },
     testimonial: {
       quote: "Prodvestor built us a secure, compliant portal that our patients love. It's streamlined our operations significantly.",
       author: 'Dr. Emily Rodriguez',
       position: 'Chief Medical Officer, MediCare Plus',
-      avatar: '/images/testimonials/emily-rodriguez.jpg'
+      avatar: '/assets/images/testimonials/emily-rodriguez.jpeg'
     },
     link: null,
     status: 'Live',
@@ -233,18 +233,18 @@ export const projects = [
     year: 2023,
     featured: false,
     images: {
-      thumbnail: '/images/projects/logistics-thumb.jpg',
-      hero: '/images/projects/logistics-hero.jpg',
+      thumbnail: '/assets/images/projects/logistics-thumb.jpg',
+      hero: '/assets/images/projects/logistics-hero.jpg',
       gallery: [
-        '/images/projects/logistics-1.jpg',
-        '/images/projects/logistics-2.jpg'
+        '/assets/images/projects/logistics-1.jpg',
+        '/assets/images/projects/logistics-2.jpg'
       ]
     },
     testimonial: {
       quote: "The tracking system has revolutionized how we manage our fleet. Real-time data helps us make better decisions every day.",
       author: 'James Wilson',
       position: 'Operations Director, GlobalShip Logistics',
-      avatar: '/images/testimonials/james-wilson.jpg'
+      avatar: '/assets/images/testimonials/james-wilson.jpg'
     },
     link: null,
     status: 'Live',
@@ -292,18 +292,18 @@ export const projects = [
     year: 2022,
     featured: false,
     images: {
-      thumbnail: '/images/projects/property-thumb.jpg',
-      hero: '/images/projects/property-hero.jpg',
+      thumbnail: '/assets/images/projects/property-thumb.jpg',
+      hero: '/assets/images/projects/property-hero.jpg',
       gallery: [
-        '/images/projects/property-1.jpg',
-        '/images/projects/property-2.jpg'
+        '/assets/images/projects/property-1.jpg',
+        '/assets/images/projects/property-2.jpg'
       ]
     },
     testimonial: {
       quote: "RentEase has made property management so much easier. Everything I need is in one place.",
       author: 'Lisa Martinez',
       position: 'Property Manager',
-      avatar: '/images/testimonials/lisa-martinez.jpg'
+      avatar: '/assets/images/testimonials/lisa-martinez.jpg'
     },
     link: 'https://example.com',
     status: 'Live',
@@ -351,18 +351,18 @@ export const projects = [
     year: 2022,
     featured: false,
     images: {
-      thumbnail: '/images/projects/education-thumb.jpg',
-      hero: '/images/projects/education-hero.jpg',
+      thumbnail: '/assets/images/projects/education-thumb.jpg',
+      hero: '/assets/images/projects/education-hero.jpg',
       gallery: [
-        '/images/projects/education-1.jpg',
-        '/images/projects/education-2.jpg'
+        '/assets/images/projects/education-1.jpg',
+        '/assets/images/projects/education-2.jpg'
       ]
     },
     testimonial: {
       quote: "The platform helped us transition to online learning seamlessly. Students and teachers love the intuitive interface.",
       author: 'Prof. David Thompson',
       position: 'Director, EduTech Academy',
-      avatar: '/images/testimonials/david-thompson.jpg'
+      avatar: '/assets/images/testimonials/david-thompson.jpg'
     },
     link: 'https://example.com',
     status: 'Live',

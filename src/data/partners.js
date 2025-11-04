@@ -9,7 +9,7 @@ export const partners = [
   {
     id: 1,
     name: 'SecureBank Solutions',
-    logo: '/images/partners/securebank.svg',
+    logo: '/assets/images/partners/securebank.svg',
     website: 'https://securebank.example.com',
     category: 'Client',
     industry: 'FinTech',
@@ -20,7 +20,7 @@ export const partners = [
   {
     id: 2,
     name: 'StyleHub Fashion',
-    logo: '/images/partners/stylehub.svg',
+    logo: '/assets/images/partners/stylehub.svg',
     website: 'https://stylehub.example.com',
     category: 'Client',
     industry: 'E-commerce',
@@ -31,7 +31,7 @@ export const partners = [
   {
     id: 3,
     name: 'MediCare Plus',
-    logo: '/images/partners/medicare.svg',
+    logo: '/assets/images/partners/medicare.svg',
     website: 'https://medicareplus.example.com',
     category: 'Client',
     industry: 'Healthcare',
@@ -42,7 +42,7 @@ export const partners = [
   {
     id: 4,
     name: 'GlobalShip Logistics',
-    logo: '/images/partners/globalship.svg',
+    logo: '/assets/images/partners/globalship.svg',
     website: 'https://globalship.example.com',
     category: 'Client',
     industry: 'Logistics',
@@ -53,7 +53,7 @@ export const partners = [
   {
     id: 5,
     name: 'Amazon Web Services',
-    logo: '/images/partners/aws.svg',
+    logo: '/assets/images/partners/aws.svg',
     website: 'https://aws.amazon.com',
     category: 'Technology Partner',
     industry: 'Cloud Computing',
@@ -64,7 +64,7 @@ export const partners = [
   {
     id: 6,
     name: 'Microsoft Azure',
-    logo: '/images/partners/azure.svg',
+    logo: '/assets/images/partners/azure.svg',
     website: 'https://azure.microsoft.com',
     category: 'Technology Partner',
     industry: 'Cloud Computing',
@@ -75,7 +75,7 @@ export const partners = [
   {
     id: 7,
     name: 'Google Cloud',
-    logo: '/images/partners/gcloud.svg',
+    logo: '/assets/images/partners/gcloud.svg',
     website: 'https://cloud.google.com',
     category: 'Technology Partner',
     industry: 'Cloud Computing',
@@ -86,7 +86,7 @@ export const partners = [
   {
     id: 8,
     name: 'MongoDB',
-    logo: '/images/partners/mongodb.svg',
+    logo: '/assets/images/partners/mongodb.svg',
     website: 'https://mongodb.com',
     category: 'Technology Partner',
     industry: 'Database',
@@ -97,7 +97,7 @@ export const partners = [
   {
     id: 9,
     name: 'Docker',
-    logo: '/images/partners/docker.svg',
+    logo: '/assets/images/partners/docker.svg',
     website: 'https://docker.com',
     category: 'Technology Partner',
     industry: 'DevOps',
@@ -108,7 +108,7 @@ export const partners = [
   {
     id: 10,
     name: 'Stripe',
-    logo: '/images/partners/stripe.svg',
+    logo: '/assets/images/partners/stripe.svg',
     website: 'https://stripe.com',
     category: 'Technology Partner',
     industry: 'Payments',

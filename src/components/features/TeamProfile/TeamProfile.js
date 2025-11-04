@@ -28,6 +28,9 @@ function TeamProfile() {
     );
   }
 
+  // Use default team image for all members
+  const memberImage = member.image || '/assets/images/team/Sarah.jpg';
+
   return (
     <div className="team-profile">
       {/* Hero */}
@@ -40,7 +43,7 @@ function TeamProfile() {
           <div className="team-profile__hero-content">
             <div className="team-profile__image">
               <img 
-                src={member.image || '/images/team/placeholder.jpg'} 
+                src={memberImage} 
                 alt={member.name} 
               />
             </div>
