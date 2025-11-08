@@ -12,10 +12,11 @@ function Footer() {
       { label: 'Our Team', path: '/team' },
       { label: 'Careers', path: '/careers' },
       { label: 'Blog', path: '/blog' }
+      
     ],
     services: [
+       { label: 'Project Development', path: '/services/project-development' },
       { label: 'Talent Acquisition', path: '/services/talent-acquisition' },
-      { label: 'Project Development', path: '/services/project-development' },
       { label: 'IT Consultation', path: '/services/it-consultation' },
       { label: 'Training & Mentorship', path: '/services/training' }
     ],

@@ -21,7 +21,7 @@ function ServicesPage() {
               Comprehensive Technology Solutions
             </h1>
             <p className="services-page__subtitle">
-              From elite talent acquisition to innovative project development, expert training, and strategic IT consultation—Prodvestor delivers end-to-end technology services that drive business growth and transformation.
+              From innovative project development to elite talent acquisition, expert training, and strategic IT consultation—Prodvestor delivers end-to-end technology services that drive business growth and transformation.
             </p>
           </div>
         </div>

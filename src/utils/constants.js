@@ -12,8 +12,8 @@ export const COMPANY = {
   email: 'info@prodvestor.com',
   phone: '+254 XXX XXX XXX',
   address: {
-    street: 'Ndege Road, The Watermark Business Park',
-    building: 'Nairobi Garage',
+    street: 'Karen, Ndege Road, The Watermark Business Park',
+    building: 'Nairobi',
     city: 'Nairobi',
     county: 'Nairobi County',
     country: 'Kenya'

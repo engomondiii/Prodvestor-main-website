@@ -24,7 +24,7 @@ function ContactInfo() {
     {
       icon: '📍',
       title: 'Address',
-      value: 'NairobI Garage, Nairobi, Kenya',
+      value: 'Ndege Road, Watermark Business Park, Karen, Nairobi, Kenya',
       link: 'https://maps.google.com'
     }
   ];
