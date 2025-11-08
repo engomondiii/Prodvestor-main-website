@@ -5,7 +5,7 @@
 
 // Company Information
 export const COMPANY = {
-  name: 'Prodvestor Ltd',
+  name: 'Prodvestor Ltd.',
   tagline: 'Where Innovation Meets Execution',
   founded: '2025',
   registrationNumber: 'PVT-YQ19YYE2',
