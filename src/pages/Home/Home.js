@@ -19,10 +19,10 @@ function Home() {
     <div className="home-page">
       {/* Hero Section */}
       <Hero
-        subtitle="Bridging Talent with Innovation"
+        subtitle="Where Innovation Meets Execution"
         title="Empowering Global Tech Through African Excellence"
         highlightText="African Excellence"
-        description="We connect skilled software developers from emerging markets with global opportunities while building innovative solutions that transform industries. From talent acquisition to cutting-edge project development, we're reshaping the future of technology."
+        description="We build innovative solutions that transform industries while connecting skilled software developers from emerging markets with global opportunities. From cutting-edge project development to strategic talent acquisition, we're reshaping the future of technology."
         primaryCTA={{
           text: 'Partner With Us',
           link: '/contact'
@@ -43,7 +43,7 @@ function Home() {
       <Services
         subtitle="What We Do"
         title="Comprehensive Technology Solutions"
-        description="From elite talent placement to innovative project development, training programs, and expert IT consultation, Prodvestor delivers end-to-end technology services that drive business growth."
+        description="From cutting-edge project development and strategic IT consultation to specialized training programs and elite talent acquisition, Prodvestor delivers comprehensive technology solutions that drive business growth."
         limit={6}
       />
 
@@ -54,14 +54,16 @@ function Home() {
         description="Prodvestor is pioneering a new era of global tech collaboration. We mobilize top-tier software developers from Kenya and emerging markets, connecting them with international opportunities while simultaneously building transformative technology solutions."
         features={[
           {
-            icon: '🌍',
-            title: 'Global Talent Mobilization',
-            description: 'Rigorous vetting and placement of skilled developers from emerging markets into international tech companies, solving global talent shortages.'
-          },
-          {
-            icon: '💡',
+             icon: '💡',
             title: 'Innovation at Scale',
             description: 'Developing proprietary and collaborative tech solutions across healthcare, education, sustainability, and beyond using AI, blockchain, and cloud technologies.'
+            },
+          {
+             icon: '🌍',
+            title: 'Global Talent Mobilization',
+            description: 'Rigorous vetting and placement of skilled developers from emerging markets into international tech companies, solving global talent shortages.'
+         
+           
           },
           {
             icon: '🤝',

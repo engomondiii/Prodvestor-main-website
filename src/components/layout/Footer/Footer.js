@@ -35,7 +35,7 @@ function Footer() {
           {/* Brand Column */}
           <div className="footer__column footer__column--brand">
             <Link to="/" className="footer__logo">
-              <img src="/assets/images/logo/logo-white.svg" alt="Prodvestor" className="footer__logo-image"/>
+              <img src="/assets/images/logo/logo.png" alt="Prodvestor" className="footer__logo-image"/>
               <span className="footer__logo-text">Prodvestor</span>
             </Link>
             <p className="footer__tagline">{COMPANY.tagline}</p>

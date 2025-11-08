@@ -1,6 +1,6 @@
 # Prodvestor Website
 
-**Bridging Talent with Innovation**
+**Where Innovation Meets Execution**
 
 A modern, responsive React website for Prodvestor Ltd - connecting elite software developers from emerging markets with global opportunities while building innovative technology solutions.
 
@@ -375,4 +375,4 @@ Unauthorized copying, modification, or distribution of this software is strictly
 
 **Built with ❤️ by the Prodvestor Team**
 
-*Bridging Talent with Innovation - Empowering developers, transforming businesses, shaping the future.*
+*Where Innovation Meets Execution - Empowering developers, transforming businesses, shaping the future.*

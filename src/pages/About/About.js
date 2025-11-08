@@ -18,10 +18,10 @@ function About() {
         <div className="container">
           <div className="about-page__hero-content">
             <h1 className="about-page__title">
-              Bridging Talent with Innovation
+              Where Innovation Meets Execution
             </h1>
             <p className="about-page__subtitle">
-              Prodvestor is pioneering a new era of global tech collaboration, connecting elite developers from emerging markets with transformative opportunities worldwide.
+              Prodvestor is pioneering a new era of technology innovation, building transformative solutions while connecting elite developers from emerging markets with global opportunities.
             </p>
           </div>
         </div>
@@ -34,7 +34,7 @@ function About() {
             <div className="about-page__section-icon">🔭</div>
             <h2>Our Vision</h2>
             <p>
-              To emerge as the foremost global partner in talent acquisition and technological innovation, empowering developers from diverse backgrounds and delivering impactful, sustainable solutions that shape the future.
+              To emerge as the foremost global partner in technological innovation and talent development, delivering impactful, sustainable solutions that shape the future while empowering developers from diverse backgrounds.
             </p>
           </div>
 
@@ -42,9 +42,10 @@ function About() {
             <div className="about-page__section-icon">🎯</div>
             <h2>Our Mission</h2>
             <ul className="about-page__mission-list">
+              
+              <li>To conceive, develop, and deploy innovative projects that solve critical challenges and drive consistent value creation</li>
               <li>To mobilize and elevate top-tier software development talent from Kenya and beyond</li>
               <li>To forge strategic partnerships with global tech companies, streamlining their recruitment and onboarding processes</li>
-              <li>To conceive, develop, and deploy innovative projects that solve critical challenges and drive consistent value creation</li>
               <li>To champion sustainable growth through equitable partnerships, robust mentorship, and shared incentive models</li>
             </ul>
           </div>
@@ -61,19 +62,21 @@ function About() {
 
           <div className="about-page__pillars-grid">
             <div className="about-page__pillar">
-              <div className="about-page__pillar-icon">🌍</div>
-              <h3>Global Talent Mobilization</h3>
+            <div className="about-page__pillar-icon">💡</div>
+
+             <h3>Innovative Project Incubation</h3>
               <p>
-                Leading conduit for connecting highly skilled software developers from emerging markets with global tech companies through rigorous vetting, proactive sourcing, and seamless integration.
+                Identifying market gaps and developing proprietary tech solutions using AI, Blockchain, Cloud Computing, with focus on scalability, sustainability, and user-centric design.
               </p>
             </div>
 
             <div className="about-page__pillar">
-              <div className="about-page__pillar-icon">💡</div>
-              <h3>Innovative Project Incubation</h3>
+               <div className="about-page__pillar-icon">🌍</div>
+              <h3>Global Talent Mobilization</h3>
               <p>
-                Identifying market gaps and developing proprietary tech solutions using AI, Blockchain, Cloud Computing, with focus on scalability, sustainability, and user-centric design.
+                Leading conduit for connecting highly skilled software developers from emerging markets with global tech companies through rigorous vetting, proactive sourcing, and seamless integration.
               </p>
+              
             </div>
 
             <div className="about-page__pillar">
@@ -121,24 +124,25 @@ function About() {
         <div className="container">
           <h2 className="about-page__section-title">What We Offer</h2>
           <p className="about-page__section-description">
-            Comprehensive technology solutions spanning talent, innovation, and strategic guidance
+            Technology solutions that transform businesses—innovative development, global talent, and strategic expertise
           </p>
 
           <div className="about-page__services-grid">
+            <div className="about-page__service">
+              <div className="about-page__service-icon">💻</div>
+               <h3>Project Development Services</h3>
+              <p>
+                Custom SaaS platforms, web and mobile applications, AI/ML solutions, blockchain applications, and cloud-native systems across healthcare, education, finance, and sustainability.
+              </p>
+            </div>
+
             <div className="about-page__service">
               <div className="about-page__service-icon">🎯</div>
               <h3>Talent Acquisition Services</h3>
               <p>
                 Comprehensive technical interviews, rigorous screening, seamless onboarding, and post-hire support for developers across all experience levels and technology stacks.
               </p>
-            </div>
-
-            <div className="about-page__service">
-              <div className="about-page__service-icon">💻</div>
-              <h3>Project Development Services</h3>
-              <p>
-                Custom SaaS platforms, web and mobile applications, AI/ML solutions, blockchain applications, and cloud-native systems across healthcare, education, finance, and sustainability.
-              </p>
+             
             </div>
 
             <div className="about-page__service">

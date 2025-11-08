@@ -6,7 +6,7 @@
 // Company Information
 export const COMPANY = {
   name: 'Prodvestor Ltd',
-  tagline: 'Bridging Talent with Innovation',
+  tagline: 'Where Innovation Meets Execution',
   founded: '2025',
   registrationNumber: 'PVT-YQ19YYE2',
   email: 'info@prodvestor.com',
@@ -151,7 +151,7 @@ export const STORAGE_KEYS = {
 
 // SEO Defaults
 export const SEO = {
-  DEFAULT_TITLE: 'Prodvestor | Bridging Talent with Innovation',
+  DEFAULT_TITLE: 'Prodvestor | Where Innovation Meets Execution',
   DEFAULT_DESCRIPTION: 'Prodvestor connects elite software developers from emerging markets with global opportunities while building innovative technology solutions across healthcare, education, sustainability, and beyond.',
   DEFAULT_KEYWORDS: 'software development, talent acquisition, Kenya developers, project development, IT consultation, tech training, AI development, blockchain solutions',
   DEFAULT_OG_IMAGE: '/assets/images/og-image.jpg',

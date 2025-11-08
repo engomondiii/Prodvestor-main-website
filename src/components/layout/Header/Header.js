@@ -108,6 +108,11 @@ function Header() {
         {/* Logo */}
         <Link to="/" className="header__logo" aria-label="Prodvestor Home">
           <div className="header__logo-icon">
+            <img 
+              src="/assets/images/logo/logo.png" 
+              alt="Prodvestor Logo" 
+              className="header__logo-image"
+            />
             <span className="header__logo-text">PRODVESTOR</span>
           </div>
         </Link>

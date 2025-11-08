@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     const routeTitles = {
-      '/': 'Prodvestor | Bridging Talent with Innovation',
+      '/': 'Prodvestor | Where Innovation Meets Execution',
       '/about': 'About Us | Prodvestor',
       '/services': 'Our Services | Prodvestor',
       '/services/talent-acquisition': 'Talent Acquisition Services | Prodvestor',
@@ -48,7 +48,7 @@ function App() {
       '/privacy-policy': 'Privacy Policy | Prodvestor'
     };
 
-    document.title = routeTitles[location.pathname] || 'Prodvestor | Bridging Talent with Innovation';
+    document.title = routeTitles[location.pathname] || 'Prodvestor | Where Innovation Meets Execution';
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

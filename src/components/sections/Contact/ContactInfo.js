@@ -12,19 +12,19 @@ function ContactInfo() {
     {
       icon: '📧',
       title: 'Email',
-      value: 'hello@prodvestor.com',
-      link: 'mailto:hello@prodvestor.com'
+      value: 'info@prodvestor.com',
+      link: 'mailto:info@prodvestor.com'
     },
     {
       icon: '📞',
       title: 'Phone',
-      value: '+1 (555) 123-4567',
+      value: '+254790883802',
       link: 'tel:+15551234567'
     },
     {
       icon: '📍',
       title: 'Address',
-      value: '123 Tech Street, San Francisco, CA 94102',
+      value: 'NairobI Garage, Nairobi, Kenya',
       link: 'https://maps.google.com'
     }
   ];
