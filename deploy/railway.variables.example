@@ -1,0 +1,5 @@
+# Set these in Vercel now, or Railway when migrating. NEXT_PUBLIC values require rebuild.
+PORT=3000
+PUBLIC_ORIGIN=https://www.prodvestor.com
+CORE_API_URL=https://api.prodvestor.com
+NEXT_PUBLIC_DASHBOARD_URL=https://app.prodvestor.com

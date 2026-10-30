@@ -1,36 +1,23 @@
 {
-  "name": "prodvestor-complete-website",
-  "version": "0.1.0",
+  "name": "prodvestor-web",
+  "version": "6.0.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-helmet-async": "^2.0.5",
-    "react-icons": "^5.5.0",
-    "react-router-dom": "^7.9.4",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
-    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
-    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "next": "16.4.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "lucide-react": "^0.468.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
   }
 }

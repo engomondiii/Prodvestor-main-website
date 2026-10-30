@@ -1,0 +1,2 @@
+/* Self-hosted system typography; no third-party font requests. */
+@font-face{font-family:Display;src:local('Helvetica Neue');font-style:normal;font-weight:100 900;font-display:swap}
