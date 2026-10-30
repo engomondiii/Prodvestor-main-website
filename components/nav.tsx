@@ -31,8 +31,8 @@ export function Nav() {
           <Link className="login" href={loginUrl}>
             Sign in
           </Link>
-          <Link className="btn small" href={startUrl}>
-            Build your business <ArrowUpRight size={15} />
+          <Link className="btn small" href="/#domain-request">
+            Choose your domain <ArrowUpRight size={15} />
           </Link>
           <button
             className="menu-toggle"

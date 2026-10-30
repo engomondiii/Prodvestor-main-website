@@ -2342,3 +2342,48 @@ footer {
     padding: 12px 16px;
   }
 }
+
+/* Refined reading scale and a domain-first opening. */
+body { font-size:16px; }
+p, .panel p, .prose p, .faq p, .steps p, .service-card p,
+.include-row p, .industry-card p, .ai-feature p, .mission-bottom p,
+.launch-feature p, .section-heading > p, .section-heading > div:last-child > p { font-size:16px; line-height:1.7; }
+.hero-copy > p, .page-hero > p { font-size:17px; line-height:1.7; }
+.eyebrow, .status-label, .tag, .fine-print, .cta-note { font-size:12px; letter-spacing:.07em; }
+.hero-foot p, footer p, footer a, .footer-bottom, .form-stack label,
+.ai-stack small, .build-note, .notice { font-size:14px; line-height:1.65; }
+.btn, .btn.small, .quiet-link, .text-link, .nav-links, .nav-actions { font-size:14px; }
+.form-stack input, .form-stack textarea, .form-stack select { font-size:16px; }
+.path-grid h3 { font-size:22px; }
+.ask-inline, .ask-launcher { font-size:14px; }
+.ask-message p, .ask-prompts button { font-size:15px; }
+.domain-hero { min-height:0; padding-top:48px; padding-bottom:52px; gap:56px; grid-template-columns:1.05fr 1fr; }
+.domain-hero h1 { font-size:clamp(38px,4vw,56px); }
+.domain-hero .eyebrow { margin-bottom:20px; font-size:12px; }
+.domain-hero .hero-copy > p { max-width:48ch; margin-bottom:24px; }
+.domain-hero .domain-start { margin:0; padding:32px; background:#edf2e5; box-shadow:0 16px 48px #163d300b; }
+.domain-start h3 { font-size:28px; letter-spacing:-.03em; margin-bottom:14px; }
+.domain-start > p { font-size:15px; line-height:1.65; }
+.domain-start form { display:grid; grid-template-columns:1fr; gap:12px; }
+.domain-start label { font-size:14px; min-width:0; }
+.domain-start input { font-size:16px; padding:15px; }
+.domain-start .btn { width:100%; }
+.domain-start .domain-disclosure { font-size:12px; margin:14px 0 20px; line-height:1.6; }
+.domain-offer { border-top:1px solid #cbd8bd; padding-top:20px; }
+.domain-offer strong { font-size:14px; }
+.domain-offer p { font-size:14px; line-height:1.65; margin:8px 0; }
+.domain-offer a { font-size:14px; font-weight:600; text-decoration:underline; text-underline-offset:4px; }
+@media(max-width:850px) {
+ .domain-hero { grid-template-columns:1fr; padding-top:28px; gap:32px; }
+ .domain-hero .domain-start { order:-1; }
+ .domain-hero h1 { font-size:42px; }
+ .hero-copy > p, .page-hero > p { font-size:16px; }
+}
+@media(max-width:540px) {
+ .domain-hero { padding-top:22px; padding-bottom:36px; }
+ .domain-hero .domain-start { padding:24px; }
+ .domain-start h3 { font-size:26px; }
+ .domain-hero h1, .page-hero h1 { font-size:36px; }
+ .nav-links.open { font-size:16px; }
+ .section { padding-top:52px; padding-bottom:52px; }
+}

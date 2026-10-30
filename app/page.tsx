@@ -13,12 +13,11 @@ import {
   Wallet,
   MoveUpRight,
 } from "lucide-react";
-import { Network } from "@/components/network";
 import { startUrl } from "@/lib/config";
 export default function Home() {
   return (
     <>
-      <section className="hero container">
+      <section className="hero container domain-hero">
         <div className="hero-copy">
           <div className="eyebrow">
             <span className="dot" /> WEBSITES · CUSTOM SOFTWARE · AI &
@@ -45,20 +44,8 @@ export default function Home() {
               Explore Launchpad <ArrowRight size={16} />
             </Link>
           </div>
-          <div className="hero-foot">
-            <div className="mini-stack">
-              <span>↗</span>
-              <span>✳</span>
-              <span>◎</span>
-            </div>
-            <p>
-              A clear scope. A practical plan.
-              <br />
-              <b>Technology built around your business.</b>
-            </p>
-          </div>
         </div>
-        <Network />
+        <DomainStart />
       </section>
       <section className="section container" aria-labelledby="choose-path">
         <div className="section-heading">
@@ -106,7 +93,6 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <DomainStart />
         <div style={{ marginTop: 24 }}>
           <AskButton question="Which Prodvestor service is right for my business?" />
         </div>

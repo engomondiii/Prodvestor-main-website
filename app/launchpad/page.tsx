@@ -15,29 +15,17 @@ export const metadata = {
 export default function Launchpad() {
   return (
     <>
-      <section className="page-hero container">
-        <span className="eyebrow">
-          PRODVESTOR LAUNCHPAD / YOUR FIRST BIG STEP
-        </span>
-        <h1>
-          Your business.
-          <br />
-          <span>Ready to be found.</span>
-        </h1>
-        <p>
-          Give customers a clear way to find you, understand what you offer and
-          get in touch. Eligible verified businesses that purchase a domain
-          through Prodvestor receive a professional website build, basic brand
-          identity and business email setup at no build fee. We agree the scope
-          first; the 14-day build window begins after verification, domain
-          registration and scope acceptance.
-        </p>
-        <Link href={startUrl} className="btn">
-          Start your Launchpad journey <ArrowUpRight size={18} />
-        </Link>
-      </section>
-      <section className="container page-content">
+      <section className="hero container domain-hero">
+        <div className="hero-copy">
+          <span className="eyebrow">PRODVESTOR LAUNCHPAD</span>
+          <h1>Your business.<br /><span>Ready to be found.</span></h1>
+          <p>A professional website, basic brand identity and business email setup for eligible businesses that purchase a domain through Prodvestor.</p>
+          <p>We agree the scope and costs first. Your 14-day build window begins after business verification, domain registration and scope acceptance.</p>
+          <a className="text-link" href="#launchpad-details">Explore everything included ↓</a>
+        </div>
         <DomainStart />
+      </section>
+      <section className="container page-content" id="launchpad-details">
         <div style={{ marginTop: 24, marginBottom: 40 }}>
           <AskButton question="Explain domain registration and what is included in Launchpad." />
         </div>

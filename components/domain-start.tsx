@@ -7,14 +7,9 @@ export function DomainStart() {
   const router = useRouter();
   return (
     <div className="domain-start" id="domain-request">
-      <span className="eyebrow">YOUR NAME. YOUR NEXT STEP.</span>
-      <h3>Start with a domain that feels like your business.</h3>
-      <p>
-        Your domain is the address customers use to find your website, such as
-        yourbusiness.com. Share the name you have in mind and we’ll help you
-        review availability, registration costs and the next steps for
-        Launchpad.
-      </p>
+      <span className="eyebrow">START WITH YOUR DOMAIN</span>
+      <h3>Your next chapter starts with a name.</h3>
+      <p>Choose your business address. Request availability and pricing, then start your website with Launchpad.</p>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -51,16 +46,14 @@ export function DomainStart() {
           />
         </label>
         <button className="btn" type="submit">
-          Request a domain review ↗
+          Request this domain ↗
         </button>
       </form>
       {error && <p role="alert">{error}</p>}
-      <p id="domain-explanation" style={{ marginTop: 18 }}>
-        This starts an enquiry, not a live availability check or a reservation.
-        Your domain is secured only after successful registration is confirmed.
-        Registration and renewal fees are separate from the eligible website
-        build.
+      <p id="domain-explanation" className="domain-disclosure">
+        A request does not reserve the name. Registration is confirmed by our team after payment and successful registrar registration.
       </p>
+      <div className="domain-offer"><strong>A domain. A website. A stronger start.</strong><p>Eligible businesses receive a scoped website build and basic brand identity at no build fee. Domain, renewal and ongoing service costs are separate.</p><a href="/launchpad">See what’s included in Launchpad ↗</a></div>
     </div>
   );
 }
