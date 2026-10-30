@@ -73,7 +73,7 @@ export function ContactForm() {
       </p>
       {error && (
         <div className="error" role="alert">
-          {error} <a href="mailto:info@prodvestor.com">Email the team ↗</a>
+          {error} <a href="mailto:enquiries@prodvestor.com">Email the team ↗</a>
         </div>
       )}
       {notice && (

@@ -25,9 +25,11 @@ export default function Contact() {
               digital foundation? Let’s work out what makes sense for your
               business.
             </p>
-            <a className="text-link" href="mailto:info@prodvestor.com">
-              info@prodvestor.com ↗
+            <a className="text-link" href="mailto:enquiries@prodvestor.com">
+              enquiries@prodvestor.com ↗
             </a>
+            <p>Official correspondence: <a href="mailto:info@prodvestor.com">info@prodvestor.com</a></p>
+            <p>Careers: <a href="mailto:career@prodvestor.com">career@prodvestor.com</a></p>
             <p>
               Nairobi, Kenya
               <br />

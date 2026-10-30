@@ -13,7 +13,7 @@ export async function POST(r: NextRequest) {
     return NextResponse.json(
       {
         detail:
-          "Online enquiries are being connected. Please email info@prodvestor.com.",
+          "Online enquiries are being connected. Please email enquiries@prodvestor.com.",
       },
       { status: 503 },
     );
@@ -35,7 +35,7 @@ export async function POST(r: NextRequest) {
     return NextResponse.json(
       {
         detail:
-          "We could not save your enquiry right now. Please email info@prodvestor.com.",
+          "We could not save your enquiry right now. Please email enquiries@prodvestor.com.",
       },
       { status: 503 },
     );
