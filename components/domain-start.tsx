@@ -20,10 +20,10 @@ export function DomainStart() {
   return (
     <div className="domain-start" id="domain-request">
       <span className="eyebrow">START WITH YOUR DOMAIN</span>
-      <h3>Your next chapter starts with a name.</h3>
+      <h3>Register your preferred domain.</h3>
       <p>
-        Choose your business address. Check availability, see your options, then
-        start your website with Launchpad.
+        Enter the website address you want, such as yourbusiness.com. Check if
+        it’s available, then review the price and complete registration.
       </p>
       <form
         onSubmit={async (e) => {
@@ -60,7 +60,7 @@ export function DomainStart() {
         }}
       >
         <label htmlFor="preferred-domain">
-          Your preferred domain
+          Enter the domain you want
           <input
             id="preferred-domain"
             value={domain}
