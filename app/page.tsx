@@ -1,5 +1,5 @@
 import { DomainStart } from "@/components/domain-start";
-import { AskButton } from "@/components/ask-prodvestor";
+import { AskButton, AIEntry } from "@/components/ask-prodvestor";
 import { SolutionsSection } from "@/components/solutions-section";
 import Link from "next/link";
 import {
@@ -47,6 +47,7 @@ export default function Home() {
         </div>
         <DomainStart />
       </section>
+      <AIEntry />
       <section className="section container" aria-labelledby="choose-path">
         <div className="section-heading">
           <div>

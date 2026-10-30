@@ -4,11 +4,26 @@ import { ArrowUpRight } from "lucide-react";
 export function ContactForm() {
   const [brief, setBrief] = useState("");
   useEffect(() => {
+    const consumeBrief = () => {
+      try {
+        const saved = sessionStorage.getItem("prodvestor:brief");
+        if (saved) {
+          setBrief(saved.slice(0, 5000));
+          sessionStorage.removeItem("prodvestor:brief");
+        }
+      } catch {
+        /* Storage may be disabled; the form remains available. */
+      }
+    };
+    consumeBrief();
+    window.addEventListener("prodvestor:brief-ready", consumeBrief);
     const domain = new URLSearchParams(window.location.search).get("domain");
     if (domain && domain.length < 254)
       setBrief(
         `I would like an availability and pricing review for ${domain}. Please explain registration, renewal costs and Launchpad eligibility.`,
       );
+    return () =>
+      window.removeEventListener("prodvestor:brief-ready", consumeBrief);
   }, []);
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");

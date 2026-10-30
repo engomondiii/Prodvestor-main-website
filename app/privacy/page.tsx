@@ -20,6 +20,15 @@ export default function Page() {
             records or passwords. When live AI is unavailable, a labelled
             published service guide is shown instead.
           </p>
+          <h2>Domain ownership information</h2>
+          <p>
+            When you purchase a domain, we collect the legal owner’s name,
+            email, postal address and phone details. We share these with
+            Openprovider and the relevant registry for registration and
+            verification. These records are not used as AI knowledge. If you
+            choose to use an AI answer in an enquiry, the draft is temporarily
+            transferred within your browser and you can edit it before sending.
+          </p>
           <h2>Who we are</h2>
           <p>
             Prodvestor LTD, Nairobi, Kenya. Contact info@prodvestor.com for

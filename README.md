@@ -25,6 +25,6 @@ The active Vercel project is linked to `engomondiii/prodvestor-cicd-main-website
 
 ## Readability and public guidance
 
-The website uses self-hosted Inter Variable, 16px body descriptions, 17px introduction copy and 14px controls. The public Ask Prodvestor widget lives in the root layout. `/api/ask` proxies to the agent gateway when configured, otherwise returns explicitly labelled published service guides. No visitor login is required; private workspace context is never forwarded. Domain requests prefill the contact form and do not claim availability or registration.
+The website uses self-hosted Inter Variable, 16px body descriptions, 17px introduction copy and 14px controls. The integrated Prodvestor AI workspace lives in the root layout. `/api/ask` proxies to the agent gateway when configured, otherwise returns explicitly labelled published service guides. No visitor login is required; private workspace context is never forwarded. Domain searches use the core registrar adapter when configured. Unconfigured search offers a team-review route. Availability does not reserve a name. See docs/AI-EXPERIENCE.md for research and the core repository’s docs/DOMAIN-RESELLER.md for reseller activation.
 
 Set server-only `PUBLIC_AGENTS_API_URL` and `PUBLIC_AI_GATEWAY_KEY`, plus the canonical `PUBLIC_ORIGIN`. See the agents repository `docs/PUBLIC-WEBSITE-AI.md` for connectivity, public quotas, corpus ingestion and privacy details. Live AI is not activated by the frontend alone.

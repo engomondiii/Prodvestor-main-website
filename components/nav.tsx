@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import { AskButton } from "./ask-prodvestor";
 import { Brand } from "./brand";
 import { startUrl, loginUrl } from "@/lib/config";
 export function Nav() {
@@ -28,6 +29,7 @@ export function Nav() {
           </Link>
         </div>
         <div className="nav-actions">
+          <AskButton compact label="Ask AI" />
           <Link className="login" href={loginUrl}>
             Sign in
           </Link>

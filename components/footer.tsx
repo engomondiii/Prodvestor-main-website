@@ -51,6 +51,7 @@ export function Footer() {
           <div>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms & acceptable use</Link>
+            <Link href="/domain-terms">Domain terms</Link>
           </div>
           <span>
             <i className="dot" /> Built around your business.

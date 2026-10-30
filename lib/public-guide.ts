@@ -3,7 +3,7 @@ export function publicGuide(message: string) {
   if (/domain|reserv|registr|renew/.test(q))
     return {
       answer:
-        "Start by sharing your preferred domain on our Launchpad page. The team reviews availability and registration costs, then confirms the next steps. An enquiry does not reserve the name: it is secured only after successful registrar confirmation. Eligible verified businesses that fully pay for a domain through Prodvestor can receive a scoped website build and basic brand identity at no build fee. Hosting, renewals, mail plans and additional features are priced separately.",
+        "Start with the domain search on our Launchpad page. When the registrar connection is active, you can check availability and continue to a timed quote and registration in your workspace. If live search is not connected or your extension needs review, request help from the team. A search or payment does not itself reserve the name: it is secured only after successful registrar confirmation. Eligible verified businesses that fully pay for a domain through Prodvestor can receive a scoped website build and basic brand identity at no build fee. Hosting, renewals, mail plans and additional features are priced separately.",
       href: "/launchpad#domain-request",
       title: "Domains and Launchpad",
     };
