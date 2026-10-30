@@ -11,7 +11,7 @@ npm run typecheck
 npm run build
 ```
 
-`NEXT_PUBLIC_DASHBOARD_URL` should be the deployed dashboard’s HTTPS origin. It is a build-time public variable; rebuild when changing it. While empty, calls to action lead to assisted email onboarding. The enquiry form posts through a server-side route to Django. If the backend is unavailable, it gives an honest error and a direct email fallback.
+`NEXT_PUBLIC_DASHBOARD_URL` should be the deployed dashboard’s HTTPS origin. It is a build-time public variable; rebuild when changing it. When unset, account links use the deployed Railway dashboard. Sign-in and registration never fall back to the enquiry form. The enquiry form posts through a server-side route to Django. If the backend is unavailable, it gives an honest error and a direct email fallback.
 
 Vercel configuration is in vercel.json. Build: npm run build; install: npm ci; framework: Next.js; output: .next. Align any old Create React App project override if needed. Railway Dockerfile and railway.json are included for the later migration. Do not put backend or AI keys into this public repository.
 
