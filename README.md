@@ -18,3 +18,7 @@ Vercel configuration is in vercel.json. Build: npm run build; install: npm ci; f
 Private implementation and operational docs are in `engomondiii/prodvestor-core`; the company knowledge corpus and ingestion commands are in `engomondiii/prodvestor-agents`. Customer-facing service availability is intentionally truthful: roadmap infrastructure and credit products are not shown as active.
 
 Brand and customer-facing policy text are based on the owner-supplied product specification and need normal company review before broader commercial use. No certification, licensed-credit, uptime, or region-residency claim is implied by the interface.
+
+## Existing Vercel deployment repository
+
+The active Vercel project is linked to `engomondiii/prodvestor-cicd-main-website`, not the public companion repository. This same tested frontend has been applied to both main branches. Use `prodvestor-cicd-main-website` as the frontend source when connecting Railway to preserve the existing deployment lineage. The public `Prodvestor-main-website` copy is a companion snapshot; cross-repository synchronization is not automated.
