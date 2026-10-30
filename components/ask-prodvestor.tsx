@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { AiMarkdown } from "./ai-markdown";
+import { readAiResponse } from "@/lib/ai-stream";
 import { usePathname, useRouter } from "next/navigation";
 import {
   Sparkles,
@@ -18,6 +20,7 @@ import {
 
 type Task = "explore" | "domain" | "software" | "ai";
 type Answer = {
+  complete?: boolean;
   question: string;
   answer: string;
   mode: string;
@@ -170,6 +173,7 @@ export function AskProdvestor() {
     [task, setTask] = useState<Task>("explore"),
     [answers, setAnswers] = useState<Answer[]>([]),
     [busy, setBusy] = useState(false),
+    [streamStatus, setStreamStatus] = useState(""),
     [error, setError] = useState(""),
     [copied, setCopied] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null),
@@ -228,7 +232,7 @@ export function AskProdvestor() {
   useEffect(() => {
     if (latest && open)
       result.current?.scrollIntoView({ block: "start", behavior: "auto" });
-  }, [answers]);
+  }, [answers.length]);
   function choose(next: Task) {
     setTask(next);
     setDraft("");
@@ -241,40 +245,34 @@ export function AskProdvestor() {
     if (pending.current || text.length < 3) return;
     pending.current = true;
     setBusy(true);
+    setStreamStatus("Finding relevant company information…");
     setError("");
     setCopied(false);
     const abort = new AbortController();
     controller.current = abort;
     const timeout = setTimeout(() => abort.abort("timeout"), 60000);
-    const history = answers.slice(-3).flatMap((a) => [
+    const history = answers.filter(a => a.complete !== false).slice(-3).flatMap((a) => [
       { role: "user", content: a.question },
       { role: "assistant", content: a.answer.slice(0, 2500) },
     ]);
     try {
       const r = await fetch("/api/ask", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/x-ndjson" },
         body: JSON.stringify({ message: text, history }),
         signal: abort.signal,
       });
-      const d = await r.json();
-      if (!r.ok)
-        throw new Error(
-          d.detail ||
-            "Your answer could not be prepared. Try again or contact the team.",
-        );
-      setAnswers((prev) => [
-        ...prev,
-        {
-          question: text,
-          answer: d.answer,
-          mode: d.mode,
-          notice: d.notice,
-          href: d.href,
-          title: d.title,
-          sources: d.sources,
-        },
-      ]);
+      const streaming = r.ok && r.headers.get("content-type")?.includes("application/x-ndjson");
+      if (streaming) setAnswers(prev => [...prev, {question:text, answer:"", mode:"ai", complete:false}]);
+      const d = await readAiResponse(r, event => {
+        if (event.type === "status") setStreamStatus(event.message || "Preparing your answer…");
+        if (event.type === "delta") {
+          setStreamStatus("Writing your answer…");
+          setAnswers(prev => prev.map((a,i) => i===prev.length-1 ? {...a, answer:a.answer+(event.text || "")} : a));
+        }
+      });
+      const answer: Answer = {question:text, answer:d.answer, mode:d.mode || "ai", notice:d.notice, href:d.href, title:d.title, sources:d.sources, complete:true};
+      setAnswers(prev => streaming ? [...prev.slice(0,-1),answer] : [...prev,answer]);
       setDraft("");
     } catch (e) {
       if (abort.signal.aborted)
@@ -417,7 +415,7 @@ export function AskProdvestor() {
                       {answers.slice(0, -1).map((answer, i) => (
                         <article key={i}>
                           <strong>{answer.question}</strong>
-                          <p>{answer.answer}</p>
+                          <AiMarkdown text={answer.answer} />
                         </article>
                       ))}
                     </details>
@@ -433,7 +431,8 @@ export function AskProdvestor() {
                     {latest.notice && (
                       <p className="ai-availability-note">{latest.notice}</p>
                     )}
-                    <div className="ai-answer-text">{latest.answer}</div>
+                    {latest.complete === false && <p className="ai-stream-status" role="status">{busy ? streamStatus : "Incomplete answer — retry before using this guidance."}</p>}
+                    <div className="ai-answer-text"><AiMarkdown text={latest.answer} /></div>
                     {(latest.sources?.length || latest.href) && (
                       <details className="ai-sources">
                         <summary>
@@ -455,7 +454,7 @@ export function AskProdvestor() {
                       </details>
                     )}
                     <div className="ai-result-tools">
-                      <button onClick={copyAnswer}>
+                      <button disabled={busy || latest.complete === false} onClick={copyAnswer}>
                         {copied ? <Check size={16} /> : <Copy size={16} />}{" "}
                         {copied ? "Copied" : "Copy answer"}
                       </button>
@@ -477,7 +476,7 @@ export function AskProdvestor() {
                         {latest.title || tasks[task].action}
                         <ArrowUpRight size={17} />
                       </a>
-                      <button onClick={useBrief}>
+                      <button disabled={busy || latest.complete === false} onClick={useBrief}>
                         Use this in a project enquiry <ArrowRight size={17} />
                       </button>
                       <small>
@@ -555,7 +554,7 @@ export function AskProdvestor() {
                 )}
               </div>
               <div role="status" className="ai-request-status">
-                {busy ? "Preparing your answer…" : ""}
+                {busy ? streamStatus : ""}
               </div>
               {error && (
                 <p className="error" role="alert">

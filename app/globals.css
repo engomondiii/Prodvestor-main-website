@@ -3034,3 +3034,14 @@ footer a,
 .domain-search-result .btn {
   font-size: 13px;
 }
+
+.ai-markdown { white-space:normal; overflow-wrap:anywhere; line-height:1.7; }
+.ai-markdown p { margin:0 0 1em; }
+.ai-markdown p:last-child { margin-bottom:0; }
+.ai-markdown strong { font-weight:650; }
+.ai-markdown ul,.ai-markdown ol { padding-left:1.5em; margin:.75em 0 1em; }
+.ai-markdown li { margin:.45em 0; }
+.ai-markdown h1,.ai-markdown h2,.ai-markdown h3 { font-size:1.1em; line-height:1.4; margin:1.2em 0 .5em; }
+.ai-markdown pre { overflow:auto; padding:1em; background:#eaf0e6; border-radius:8px; }
+.ai-markdown code { font-size:.9em; }
+.ai-stream-status { color:#526c5d; font-size:14px; }

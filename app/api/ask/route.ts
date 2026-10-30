@@ -55,6 +55,7 @@ export async function POST(r: NextRequest) {
       headers: {
         "Content-Type": "application/json",
         "X-Public-AI-Key": key,
+        Accept: r.headers.get("accept")?.includes("application/x-ndjson") ? "application/x-ndjson" : "application/json",
         "X-Visitor-ID": visitor,
       },
       body: JSON.stringify({
@@ -63,7 +64,7 @@ export async function POST(r: NextRequest) {
       }),
       cache: "no-store",
       redirect: "error",
-      signal: AbortSignal.timeout(55000),
+      signal: AbortSignal.any([r.signal, AbortSignal.timeout(55000)]),
     });
     if (response.status === 429)
       return NextResponse.json(
@@ -74,6 +75,11 @@ export async function POST(r: NextRequest) {
         { status: 429 },
       );
     if (!response.ok) return fallback();
+    if (response.headers.get("content-type")?.includes("application/x-ndjson")) {
+      return new NextResponse(response.body, {headers: {
+        "Content-Type": "application/x-ndjson", "Cache-Control": "no-store, no-transform", "X-Accel-Buffering": "no",
+      }});
+    }
     const data = await response.json();
     return NextResponse.json(
       { ...data, mode: "ai" },
