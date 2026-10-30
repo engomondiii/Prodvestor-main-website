@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import "@fontsource-variable/inter";
 import "./globals.css";
+import { AskProdvestor } from "@/components/ask-prodvestor";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
@@ -9,11 +11,11 @@ export const metadata: Metadata = {
     template: "%s | Prodvestor",
   },
   description:
-    "Websites, custom software, institutional systems, AI and automation. Built for African businesses and ambitious organizations worldwide.",
+    "Websites, custom software, institutional systems, AI and automation. From your first business website to connected systems for established organizations.",
   openGraph: {
     type: "website",
     siteName: "Prodvestor Network",
-    locale: "en_KE",
+    locale: "en_US",
   },
 };
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -26,6 +28,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Nav />
         <main id="main">{children}</main>
         <Footer />
+        <AskProdvestor />
       </body>
     </html>
   );

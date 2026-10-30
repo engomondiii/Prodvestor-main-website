@@ -1,3 +1,4 @@
+import { AskButton } from "@/components/ask-prodvestor";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { solutions } from "@/lib/solutions";
@@ -26,6 +27,9 @@ export default function Solutions() {
         </Link>
       </section>
       <section className="container page-content">
+        <div style={{ marginBottom: 32 }}>
+          <AskButton />
+        </div>
         <div className="resource-grid">
           {solutions.map((s) => (
             <Link className="panel" href={"/solutions/" + s.slug} key={s.slug}>

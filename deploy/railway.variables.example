@@ -3,3 +3,7 @@ PORT=3000
 PUBLIC_ORIGIN=https://www.prodvestor.com
 CORE_API_URL=https://api.prodvestor.com
 NEXT_PUBLIC_DASHBOARD_URL=https://app.prodvestor.com
+
+# Server-only. Without these, the public assistant shows labelled service guides.
+PUBLIC_AGENTS_API_URL=
+PUBLIC_AI_GATEWAY_KEY=

@@ -14,7 +14,7 @@ export function Footer() {
               <br />
               with the right foundations.
             </p>
-            <span className="eyebrow">BUILT IN AFRICA. OPEN TO THE WORLD.</span>
+            <span className="eyebrow">CLEAR THINKING. USEFUL TECHNOLOGY.</span>
           </div>
           <div>
             <h3>Start & grow</h3>
@@ -53,7 +53,7 @@ export function Footer() {
             <Link href="/terms">Terms & acceptable use</Link>
           </div>
           <span>
-            <i className="dot" /> East Africa first. Globally minded.
+            <i className="dot" /> Built around your business.
           </span>
         </div>
       </div>

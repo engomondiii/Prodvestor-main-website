@@ -12,8 +12,9 @@ export default function Mission() {
           <span>Opportunity should be, too.</span>
         </h1>
         <p>
-          African businesses don’t lack ambition. Too often, they lack the
-          systems and recognition that let the world see it.
+          Good ideas deserve more than a difficult start. We help businesses and
+          institutions build a credible presence, improve their operations and
+          turn useful technology into lasting capability.
         </p>
       </section>
       <section className="container page-content">
@@ -26,9 +27,10 @@ export default function Mission() {
             foundation, too many capable businesses remain invisible.
           </p>
           <p>
-            Prodvestor exists to change that. Our mission is to give every
-            African SME the systems and brand recognition it needs to compete in
-            the global market.
+            Prodvestor exists to change that. Our mission is to make
+            professional digital foundations more accessible, and to help
+            organizations use software and AI to solve the problems that matter
+            to them.
           </p>
           <h2>A strong start, within reach.</h2>
           <p>
@@ -47,11 +49,14 @@ export default function Mission() {
             Clear scope, upfront costs, and customer control keep that
             relationship honest. We succeed when the businesses we help succeed.
           </p>
-          <h2>Rooted in East Africa. Open to the world.</h2>
+          <h2>Opportunity without unnecessary barriers.</h2>
           <p>
-            We’re starting in Kenya, with an East African roadmap and a global
-            outlook. We will expand services and payment options market by
-            market, guided by what we can deliver reliably.
+            Based in Nairobi, we welcome enquiries from businesses and
+            institutions wherever they operate. We especially encourage
+            entrepreneurs, SMEs and growing organizations across East Africa and
+            the wider African business community to take part. Our team confirms
+            service availability, domain requirements and payment options for
+            each engagement, so every commitment starts with clear expectations.
           </p>
           <Link className="btn" href={startUrl}>
             Build your next chapter ↗

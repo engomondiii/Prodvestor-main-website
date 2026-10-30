@@ -28,12 +28,18 @@ export default function Contact() {
             <a className="text-link" href="mailto:enquiries@prodvestor.com">
               enquiries@prodvestor.com ↗
             </a>
-            <p>Official correspondence: <a href="mailto:info@prodvestor.com">info@prodvestor.com</a></p>
-            <p>Careers: <a href="mailto:career@prodvestor.com">career@prodvestor.com</a></p>
+            <p>
+              Official correspondence:{" "}
+              <a href="mailto:info@prodvestor.com">info@prodvestor.com</a>
+            </p>
+            <p>
+              Careers:{" "}
+              <a href="mailto:career@prodvestor.com">career@prodvestor.com</a>
+            </p>
             <p>
               Nairobi, Kenya
               <br />
-              East Africa first. Globally minded.
+              Working with ambitious businesses and institutions.
             </p>
           </div>
           <div className="notice" style={{ marginTop: 24 }}>

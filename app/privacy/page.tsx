@@ -8,6 +8,18 @@ export default function Page() {
       </section>
       <section className="container page-content">
         <div className="prose">
+          <h2>Public AI guidance</h2>
+          <p>
+            The Ask Prodvestor assistant can be used without an account. When
+            live AI is connected, your question and recent conversation are sent
+            to our AI service and its configured model providers to prepare an
+            answer from approved public information. It does not have access to
+            private workspace records. The public service uses a hashed network
+            identifier and request limits to manage abuse. Chat history stays in
+            this page’s memory and can be cleared; do not submit sensitive
+            records or passwords. When live AI is unavailable, a labelled
+            published service guide is shown instead.
+          </p>
           <h2>Who we are</h2>
           <p>
             Prodvestor LTD, Nairobi, Kenya. Contact info@prodvestor.com for

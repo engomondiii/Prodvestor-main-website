@@ -1,7 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 export function ContactForm() {
+  const [brief, setBrief] = useState("");
+  useEffect(() => {
+    const domain = new URLSearchParams(window.location.search).get("domain");
+    if (domain && domain.length < 254)
+      setBrief(
+        `I would like an availability and pricing review for ${domain}. Please explain registration, renewal costs and Launchpad eligibility.`,
+      );
+  }, []);
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
@@ -25,6 +33,7 @@ export function ContactForm() {
         );
       setNotice(d.detail);
       form.reset();
+      setBrief("");
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -60,13 +69,15 @@ export function ContactForm() {
         What are you building?
         <textarea
           name="brief"
+          value={brief}
+          onChange={(e) => setBrief(e.target.value)}
           required
           minLength={30}
           maxLength={5000}
           placeholder="Tell us about your organization, the problem you want to solve, and the systems you have in mind."
         />
       </label>
-      <p style={{ fontSize: 11, margin: 0 }}>
+      <p style={{ fontSize: 16, margin: 0 }}>
         We use these details to respond to your enquiry. Please don’t include
         passwords, payment details, or identity documents.{" "}
         <a href="/privacy">Privacy information ↗</a>

@@ -1,3 +1,5 @@
+import { DomainStart } from "@/components/domain-start";
+import { AskButton } from "@/components/ask-prodvestor";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -20,18 +22,25 @@ export default function Launchpad() {
         <h1>
           Your business.
           <br />
-          <span>Ready for the world.</span>
+          <span>Ready to be found.</span>
         </h1>
         <p>
-          Reserve and fully pay for a domain with Prodvestor. We’ll build your
-          professional website and brand identity, free, within 14 days of
-          accepting your scope.
+          Give customers a clear way to find you, understand what you offer and
+          get in touch. Eligible verified businesses that purchase a domain
+          through Prodvestor receive a professional website build, basic brand
+          identity and business email setup at no build fee. We agree the scope
+          first; the 14-day build window begins after verification, domain
+          registration and scope acceptance.
         </p>
         <Link href={startUrl} className="btn">
           Start your Launchpad journey <ArrowUpRight size={18} />
         </Link>
       </section>
       <section className="container page-content">
+        <DomainStart />
+        <div style={{ marginTop: 24, marginBottom: 40 }}>
+          <AskButton question="Explain domain registration and what is included in Launchpad." />
+        </div>
         <div className="feature-grid">
           {[
             [
@@ -103,6 +112,18 @@ export default function Launchpad() {
         <div className="faq">
           <h2>A few things, upfront.</h2>
           {[
+            [
+              "Does requesting a domain reserve it?",
+              "No. Your request asks the team to check availability and quote the registration cost. A name is only secured when the registrar confirms successful registration. Availability can change before that confirmation; we do not promise a name based on a search or enquiry.",
+            ],
+            [
+              "What should I prepare before I start?",
+              "Bring your preferred domain and a few alternatives, a short description of your business, your contact details and any existing logo or content. We will explain verification requirements and agree the pages, features, recurring costs and handover details before development starts.",
+            ],
+            [
+              "Can I enquire from outside East Africa?",
+              "Yes. We welcome enquiries from businesses and institutions in other markets, and strongly encourage entrepreneurs and established organizations across East Africa and the wider African business community to participate. The team will confirm whether your requested service, registration and payment arrangements are supported before you commit.",
+            ],
             [
               "Is everything free?",
               "The eligible website build, basic brand identity, and email setup are free. You pay for the domain in full. Ongoing hosting, mail plans, paid integrations, and out-of-scope functionality are separate costs, disclosed before work begins.",

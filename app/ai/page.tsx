@@ -1,3 +1,4 @@
+import { AskButton } from "@/components/ask-prodvestor";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -65,6 +66,9 @@ export default function AI() {
         </Link>
       </section>
       <section className="container page-content">
+        <div style={{ marginBottom: 32 }}>
+          <AskButton />
+        </div>
         <div className="feature-grid">
           {offerings.map(([Icon, t, d]) => (
             <article className="panel" key={t}>

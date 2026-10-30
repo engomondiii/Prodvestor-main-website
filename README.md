@@ -22,3 +22,9 @@ Brand and customer-facing policy text are based on the owner-supplied product sp
 ## Existing Vercel deployment repository
 
 The active Vercel project is linked to `engomondiii/prodvestor-cicd-main-website`, not the public companion repository. This same tested frontend has been applied to both main branches. Use `prodvestor-cicd-main-website` as the frontend source when connecting Railway to preserve the existing deployment lineage. The public `Prodvestor-main-website` copy is a companion snapshot; cross-repository synchronization is not automated.
+
+## Readability and public guidance
+
+The website uses self-hosted Inter Variable, 18px core descriptions, 19–20px introduction copy and larger controls. The public Ask Prodvestor widget lives in the root layout. `/api/ask` proxies to the agent gateway when configured, otherwise returns explicitly labelled published service guides. No visitor login is required; private workspace context is never forwarded. Domain requests prefill the contact form and do not claim availability or registration.
+
+Set server-only `PUBLIC_AGENTS_API_URL` and `PUBLIC_AI_GATEWAY_KEY`, plus the canonical `PUBLIC_ORIGIN`. See the agents repository `docs/PUBLIC-WEBSITE-AI.md` for connectivity, public quotas, corpus ingestion and privacy details. Live AI is not activated by the frontend alone.
