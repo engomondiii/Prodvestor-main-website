@@ -2,6 +2,12 @@ import type { NextConfig } from "next";
 const config: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
+  async rewrites() {
+    return {beforeFiles: [{source: "/api/ask", destination: "https://prodvestor-dashboard-production.up.railway.app/app/api/public-ai"}, {
+      source: "/app/:path*",
+      destination: "https://prodvestor-dashboard-production.up.railway.app/app/:path*",
+    }]};
+  },
   async redirects() {
     return [
       {

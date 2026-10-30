@@ -8,7 +8,7 @@ export async function POST(r: NextRequest) {
       { detail: "Request origin rejected." },
       { status: 403 },
     );
-  const base = process.env.CORE_API_URL;
+  const base = process.env.CORE_API_URL || "https://prodvestor-core-production.up.railway.app";
   if (!base)
     return NextResponse.json(
       {
