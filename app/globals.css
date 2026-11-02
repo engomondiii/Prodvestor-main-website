@@ -3045,3 +3045,9 @@ footer a,
 .ai-markdown pre { overflow:auto; padding:1em; background:#eaf0e6; border-radius:8px; }
 .ai-markdown code { font-size:.9em; }
 .ai-stream-status { color:#526c5d; font-size:14px; }
+
+/* Keep account access visible at every breakpoint, including narrow phones. */
+.nav-links .mobile-account-link{display:none}
+.nav-actions .login{display:inline-flex;align-items:center;justify-content:center;min-height:44px;white-space:nowrap}
+@media(max-width:1180px){.nav-links.open .mobile-account-link{display:inline-flex;align-items:center;gap:8px;min-height:44px}.nav-links.open{max-height:calc(100dvh - 94px);overflow-y:auto}}
+@media(max-width:540px){.nav-actions .login{font-size:14px;padding:0 6px}.nav-actions>.ai-nav-entry{display:none}.nav.container{padding-left:16px;padding-right:16px}.menu-toggle{min-width:44px;min-height:44px;justify-content:center;align-items:center}}

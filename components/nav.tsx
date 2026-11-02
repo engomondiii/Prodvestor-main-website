@@ -11,7 +11,7 @@ export function Nav() {
     <header className="nav-wrap">
       <nav className="nav container" aria-label="Main navigation">
         <Brand />
-        <div className={"nav-links " + (open ? "open" : "")}>
+        <div id="site-navigation-links" className={"nav-links " + (open ? "open" : "")}>
           <Link href="/launchpad" onClick={() => setOpen(false)}>
             Launchpad <span className="new-pill">START HERE</span>
           </Link>
@@ -27,6 +27,8 @@ export function Nav() {
           <Link href="/mission" onClick={() => setOpen(false)}>
             Our mission
           </Link>
+          <Link className="mobile-account-link" href={loginUrl} onClick={() => setOpen(false)}>Sign in</Link>
+          <Link className="mobile-account-link" href={startUrl} onClick={() => setOpen(false)}>Create a workspace <ArrowUpRight size={15} /></Link>
         </div>
         <div className="nav-actions">
           <AskButton compact label="Ask AI" />
@@ -40,6 +42,7 @@ export function Nav() {
             className="menu-toggle"
             aria-label={open ? "Close navigation" : "Open navigation"}
             aria-expanded={open}
+            aria-controls="site-navigation-links"
             onClick={() => setOpen(!open)}
           >
             {open ? <X /> : <Menu />}
