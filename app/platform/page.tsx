@@ -17,8 +17,17 @@ const groups = [
       [
         "Domains & DNS",
         "Your business address, purchased through Prodvestor after price and availability confirmation.",
-        "Request a quote",
+        "Registration available",
       ],
+    ],
+  },
+  {
+    name: "Connect with your customers",
+    label: "BUSINESS COMMUNICATIONS",
+    items: [
+      ["Business phone numbers", "Give customers a dedicated business number. Calling and messaging options depend on country, number type and verification. Provider activation is pending.", "Inactive"],
+      ["SMS & USSD", "Reach customers with messages and simple mobile journeys. Sender approval and local coverage will be confirmed before activation.", "Inactive"],
+      ["Payments & billing", "Manage your wallet and payment history in one workspace. Card and M-PESA checkout use Paystack. Direct Prodvestor PayBill is not yet active.", "Paystack checkout"],
     ],
   },
   {
@@ -26,19 +35,19 @@ const groups = [
     label: "INFRASTRUCTURE ROADMAP",
     items: [
       [
-        "Business mail",
-        "Planned inbound and outbound business email, with SPF, DKIM, and DMARC.",
-        "In development",
+        "Business email",
+        "Your name at your business domain. Mailboxes, web and mobile access, and setup support from Prodvestor. Provider activation is pending.",
+        "Inactive",
       ],
       [
         "Connectivity & Mesh",
         "Planned private networking and governed access for your team and systems.",
-        "In development",
+        "Inactive",
       ],
       [
         "Encrypted vault & proxy",
         "Planned business secrets storage and authorized, governed traffic routing.",
-        "In development",
+        "Inactive",
       ],
     ],
   },
@@ -49,17 +58,17 @@ const groups = [
       [
         "Defensive security",
         "Planned managed WAF, DDoS protection, email security, and vulnerability monitoring.",
-        "In development",
+        "Inactive",
       ],
       [
         "Security operations",
         "Planned SOC/SIEM monitoring, incident response, and authorized assessments.",
-        "In development",
+        "Inactive",
       ],
       [
         "Governed intelligence",
         "Planned AI Gateway, RAG, and service agents with spend controls and audit records.",
-        "In development",
+        "Inactive",
       ],
     ],
   },
@@ -93,6 +102,9 @@ export default function Platform() {
                   <h3>{t}</h3>
                   <p>{d}</p>
                   <span className="status-label">{b}</span>
+                  <p><Link className="text-link" href={t === "Domains & DNS" ? "/#domain-request" : t === "Launchpad" ? "/launchpad" : t === "Payments & billing" ? "/app/wallet" : "/app/services"}>
+                    {t === "Domains & DNS" ? "Find and register your domain" : t === "Launchpad" ? "Explore Launchpad" : t === "Payments & billing" ? "Open wallet & billing" : "View service in your workspace"} <ArrowUpRight size={16} />
+                  </Link></p>
                 </article>
               ))}
             </div>

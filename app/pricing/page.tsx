@@ -85,6 +85,10 @@ export default function Pricing() {
             Funds appear after provider verification. Other payment routes are not
             currently available.
           </p>
+          <h2>Business email & phone numbers.</h2>
+          <p>Email on your own domain and dedicated business numbers will be managed through your Prodvestor workspace. Both services are currently inactive while provider setup is completed. Subscription prices, usage charges and any setup costs will be shown before activation; no payment is collected now.</p>
+          <p><Link className="text-link" href="/app/services">View services and register interest ↗</Link></p>
+          <p><Link className="text-link" href="/app/wallet">Open wallet & billing ↗</Link></p>
           <h2>Lipa Pole Pole</h2>
           <p>
             We’re developing pay-over-time plans for eligible recurring
