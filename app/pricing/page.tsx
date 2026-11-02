@@ -36,17 +36,19 @@ export default function Pricing() {
           </article>
           <article className="panel">
             <span className="eyebrow">DOMAIN & ONGOING SERVICES</span>
-            <h2>Quoted clearly.</h2>
+            <h2>Your domain. Clear annual pricing.</h2>
             <p>
-              Domain prices depend on the extension and registrar. We confirm
-              availability and cost before purchase.
+              Standard .com: KES 1,700 per year. Standard .org: KES 1,700 per year.
+              Standard .net: KES 1,750 per year. These are our current registration
+              and annual renewal prices; the search result confirms your total before payment.
+              Premium names and other extensions are priced separately.
             </p>
             <p>
               Ongoing hosting and mail, paid integrations, and third-party fees
               are separate and disclosed before you commit.
             </p>
-            <Link className="text-link" href="/contact">
-              Request a quote ↗
+            <Link className="text-link" href="/#domain-request">
+              Check your domain ↗
             </Link>
           </article>
           <article className="panel">
@@ -78,10 +80,10 @@ export default function Pricing() {
           </p>
           <h2>Payments that meet you where you are.</h2>
           <p>
-            Our payment roadmap includes mobile money, cards, bank transfers,
-            and stablecoin. Your workspace shows only the rails enabled for your
-            currency and market. A payment is credited after verified provider
-            settlement.
+            Pay in Kenyan shillings using cards or M-PESA through Paystack where
+            enabled in your workspace. Our direct Prodvestor PayBill is not yet active.
+            Funds appear after provider verification. Other payment routes are not
+            currently available.
           </p>
           <h2>Lipa Pole Pole</h2>
           <p>

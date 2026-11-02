@@ -11,6 +11,7 @@ export function DomainStart() {
     domain: string;
     available: boolean;
     purchasable: boolean;
+    checkout_message?: string;
     environment: string;
     amount: number;
     renewal_amount: number;
@@ -109,7 +110,7 @@ export function DomainStart() {
               availability.
             </p>
           )}
-          {result.available && result.purchasable ? (
+          {result.available && result.amount != null && result.currency ? (
             <>
               <p>
                 One year:{" "}
@@ -130,7 +131,7 @@ export function DomainStart() {
                 )}
                 . Renewal prices may change.
               </p>
-              <a
+              {<a
                 className="btn"
                 href={
                   dashboard
@@ -139,7 +140,8 @@ export function DomainStart() {
                 }
               >
                 Continue to registration ↗
-              </a>
+              </a>}
+              {!result.purchasable && <p>{result.checkout_message || "Checkout is temporarily unavailable. You can continue to your workspace to check its status."}</p>}
             </>
           ) : result.available ? (
             <p>
