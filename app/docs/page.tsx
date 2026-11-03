@@ -31,7 +31,7 @@ export default function Docs() {
             [
               "/platform",
               "The service roadmap",
-              "Explore the platform and see which services are in development.",
+              "Explore the platform and choose services and request setup.",
             ],
             [
               "/privacy",

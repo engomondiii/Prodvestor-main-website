@@ -159,6 +159,7 @@ export function DomainStart() {
         Availability can change. A search does not reserve the name. Ownership
         is confirmed only after payment and successful registrar registration.
       </p>
+      <p><a className="text-link" href="/app/domains">Already own a domain? Transfer or connect it ↗</a></p>
       <AskButton
         label="Explain the domain process"
         question="Explain domain registration and what is included in Launchpad."

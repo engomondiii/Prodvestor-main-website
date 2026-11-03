@@ -253,22 +253,22 @@ export default function Home() {
                 Layers,
                 "04",
                 "Your business backbone",
-                "Private connectivity, managed infrastructure, and a planned encrypted vault.",
-                "In development",
+                "Private connectivity, managed infrastructure, and encrypted secrets storage.",
+                "Request setup",
               ],
               [
                 ShieldCheck,
                 "05",
                 "Confidence, built in",
-                "A defensive security roadmap: WAF, monitoring, and authorized assessments.",
-                "In development",
+                "Defensive security services: WAF, monitoring, and authorized assessments.",
+                "Request setup",
               ],
               [
                 Sparkles,
                 "06",
                 "A smarter way forward",
                 "Service-specific AI guidance, governed AI access, and practical business support.",
-                "In development",
+                "Request setup",
               ],
             ].map(([Icon, n, title, desc, badge]) => {
               const I = Icon as typeof Globe;

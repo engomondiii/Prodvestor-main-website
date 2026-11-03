@@ -16,8 +16,8 @@ const groups = [
       ],
       [
         "Domains & DNS",
-        "Your business address, purchased through Prodvestor after price and availability confirmation.",
-        "Registration available",
+        "Register a new domain, transfer an existing one, or manage DNS records and nameservers in your workspace.",
+        "Registration & transfers",
       ],
     ],
   },
@@ -32,7 +32,7 @@ const groups = [
   },
   {
     name: "Build your backbone",
-    label: "INFRASTRUCTURE ROADMAP",
+    label: "BUSINESS INFRASTRUCTURE",
     items: [
       [
         "Business email",
@@ -41,34 +41,34 @@ const groups = [
       ],
       [
         "Connectivity & Mesh",
-        "Planned private networking and governed access for your team and systems.",
-        "Inactive",
+        "Private networking and governed access for your team and systems.",
+        "Available to order",
       ],
       [
         "Encrypted vault & proxy",
-        "Planned business secrets storage and authorized, governed traffic routing.",
-        "Inactive",
+        "Business secrets storage and authorized, governed traffic routing.",
+        "Available to order",
       ],
     ],
   },
   {
     name: "Protect what you build",
-    label: "SECURITY ROADMAP",
+    label: "SECURITY & INTELLIGENCE",
     items: [
       [
         "Defensive security",
-        "Planned managed WAF, DDoS protection, email security, and vulnerability monitoring.",
-        "Inactive",
+        "Managed WAF, DDoS protection, email security, and vulnerability monitoring.",
+        "Available to order",
       ],
       [
         "Security operations",
-        "Planned SOC/SIEM monitoring, incident response, and authorized assessments.",
-        "Inactive",
+        "SOC/SIEM monitoring, incident response, and authorized assessments.",
+        "Available to order",
       ],
       [
         "Governed intelligence",
-        "Planned AI Gateway, RAG, and service agents with spend controls and audit records.",
-        "Inactive",
+        "AI Gateway, RAG, and service agents with spend controls and audit records.",
+        "Available to order",
       ],
     ],
   },
@@ -85,7 +85,7 @@ export default function Platform() {
         </h1>
         <p>
           Start with your digital presence. Grow into connected infrastructure,
-          cybersecurity, and intelligence as services become available.
+          cybersecurity, and intelligence with services configured around your requirements.
         </p>
         <Link className="btn" href={startUrl}>
           Begin with Launchpad <ArrowUpRight size={18} />
@@ -102,8 +102,8 @@ export default function Platform() {
                   <h3>{t}</h3>
                   <p>{d}</p>
                   <span className="status-label">{b}</span>
-                  <p><Link className="text-link" href={t === "Domains & DNS" ? "/#domain-request" : t === "Launchpad" ? "/launchpad" : t === "Payments & billing" ? "/app/wallet" : "/app/services"}>
-                    {t === "Domains & DNS" ? "Find and register your domain" : t === "Launchpad" ? "Explore Launchpad" : t === "Payments & billing" ? "Open wallet & billing" : "View service in your workspace"} <ArrowUpRight size={16} />
+                  <p><Link className="text-link" href={t === "Domains & DNS" ? "/app/domains" : t === "Launchpad" ? "/launchpad" : t === "Payments & billing" ? "/app/wallet" : "/app/services"}>
+                    {t === "Domains & DNS" ? "Register, transfer or connect a domain" : t === "Launchpad" ? "Explore Launchpad" : t === "Payments & billing" ? "Open wallet & billing" : b === "Inactive" ? "View activation options" : "Request setup"} <ArrowUpRight size={16} />
                   </Link></p>
                 </article>
               ))}
